@@ -1,0 +1,112 @@
+classType myCar.myControl
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_3
+		}
+	}
+simpleIdentifier power at (721, 105) {
+		label at (0, -1)
+		inPin connection_6 {
+			bendpoints (40, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_5 {
+				bendpoints (150, 0)
+			}
+		}
+	}
+	simpleIdentifier brake at (741, 215) {
+		label at (0, -1)
+		inPin connection_8
+		outPin sequenceCall {
+			inPin connection_7 {
+				bendpoints (40, 0), (40, 100)
+			}
+		}
+	}
+	methodArgumentIdentifier calc.vtarget at (141, 95) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.v at (171, 185) {
+		label at (-20, 9)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (381, 106) {
+		inPin connection_1 {
+			bendpoints (200, 0)
+		}
+		inPin connection_2 {
+			bendpoints (170, 0)
+		}
+		outPin {
+			connection_4
+		}
+	}
+	ifElse at (511, 91) {
+		inPin connection_4 {
+			bendpoints (90, 0)
+		}
+		ifControlFlowOutPin {
+			connection_5, connection_7
+		}
+		elseControlFlowOutPin {
+			connection_11, connection_9
+		}
+		sequenceCall {
+			inPin connection_3
+		}
+	}
+	literal Numeric "100.0" at (621, 113) size (59, 0) {
+		outPin {
+			connection_6
+		}
+	}
+	literal Numeric "0.0" at (611, 213) size (49, 0) {
+		outPin {
+			connection_8
+		}
+	}
+	literal Numeric "100.0" at (531, 433) size (59, 0) {
+		outPin {
+			connection_10
+		}
+	}
+	literal Numeric "0.0" at (541, 333) size (49, 0) {
+		outPin {
+			connection_12
+		}
+	}
+	simpleIdentifier power at (641, 325) {
+		label at (0, -1)
+		inPin connection_12 {
+			bendpoints (40, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_11 {
+				bendpoints (0, 180)
+			}
+		}
+	}
+	simpleIdentifier brake at (661, 435) {
+		label at (0, -1)
+		inPin connection_10
+		outPin sequenceCall {
+			inPin connection_9 {
+				bendpoints (0, 290)
+			}
+		}
+	}
+}

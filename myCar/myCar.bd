@@ -1,0 +1,56 @@
+classType myCar.myCar
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_11
+		}
+	}
+	complexIdentifier myVehicle at (151, 61) size (38, 14) backgroundColor #ffffff {
+		label at (-10, 1)
+		methodCall myCar.myDrive_2.vCar {
+			argumentPin powerCtrl at (left, 2) connection_7
+			argumentPin brakeCtrl at (left, 9) connection_8
+			returnPin at (right, 5) {
+				connection_6
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.myDrive_2.momentum) {
+			returnPin at (right, 2) sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.myDrive_2.s) {
+			returnPin at (right, 9) sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (61, 85) {
+		label at (0, -1)
+		outPin {
+			connection_7
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (61, 155) {
+		label at (0, -1)
+		outPin {
+			connection_8
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (611, 115) {
+		label at (0, -1)
+		inPin connection_6
+		sequenceCall {
+			inPin connection_11
+		}
+	}
+}

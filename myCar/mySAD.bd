@@ -1,0 +1,146 @@
+classType myCar.mySAD
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_1
+		}
+	}
+simpleIdentifier on at  (101, 175) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at  (281, 171) {
+		inPin connection_2
+		ifControlFlowOutPin {
+			connection_14
+		, connection_10, connection_12
+		}
+		elseControlFlowOutPin {
+			connection_5, connection_3
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at  (751, 165) {
+		label at (0, -1)
+		inPin connection_11 {
+			bendpoints (80, 0)
+		}
+		sequenceCall {
+			inPin 
+		connection_10 {
+				bendpoints (410, 0)
+			}
+		}
+	}
+	
+	simpleIdentifier resources.DriverMessages.power at  (111, 285) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.DriverMessages.brake at  (111, 335) {
+		label at (0, -1)
+		outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at  (611, 335) {
+		label at (0, -1)
+		inPin connection_4
+		sequenceCall {
+			inPin connection_3 {
+				bendpoints 
+			(0, 110)
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at  (691, 275) {
+		label at (0, -1)
+		inPin connection_6 {
+			bendpoints 
+		(540, 0)
+		}
+		sequenceCall {
+			inPin connection_5 {
+				bendpoints 
+			(0, 50)
+			}
+		}
+	}
+complexIdentifier myControl_instance at (521, 141) size (14, 8) {
+		label at (0, 1)
+		methodCall myCar.myControl.calc {
+			argumentPin vtarget at (left, 0) connection_9 {
+				bendpoints (120, 0)
+			}
+			argumentPin v at (left, 1) connection_15 {
+				bendpoints (110, 0)
+			}
+			sequenceCall at (-20, -44) {
+				inPin connection_14 {
+					bendpoints (10, 0), (10, -70)
+				}
+			}
+		}
+		elementCall (myCar.myControl.power) {
+			returnPin at (right, 0) {
+				connection_11
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (myCar.myControl.brake) {
+			returnPin at (right, 1) {
+				connection_13
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier vtarget at (351, 135) {
+		label at (0, -1)
+		outPin {
+			connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (821, 225) {
+		label at (0, -1)
+		inPin connection_13 {
+			bendpoints (40, 0), (40, 70)
+		}
+		sequenceCall {
+			inPin connection_12 {
+				bendpoints (480, 0)
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (361, 195) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

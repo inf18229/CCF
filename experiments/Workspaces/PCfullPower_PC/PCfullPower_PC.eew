@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID7d71d819-dfd9-4455-b5d9-4d6409ec0f6a" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID391bdc24-af63-40de-a869-cac9d2b1e299" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID22991a58-9b29-4970-a65a-ef1db6714a65" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID83d5e30e-18d7-486c-a1dd-8fc3b10b52e0" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="IDab186d44-b553-4627-a027-d7dd06dbfc72" path="C:\Users\fschi\ETAS\ASCET-DEVELOPER-7.6.0\workspace\myCCF\experiments\Experiments\system\PCfullPower_PC\PCfullPower_PC.eex" hintPath="..\..\Experiments\system\PCfullPower_PC\PCfullPower_PC.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID436b61ba-285a-4add-8710-767928db492e" Created="2021-02-23T10:04:00.821Z" LastOpened="2021-02-23T10:21:22.168Z" LastSaved="2021-02-23T11:00:05.819Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="IDb487782b-05eb-41d9-a27c-2f72464665de" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

@@ -1,0 +1,14 @@
+Component   myCar.myDrive_2 size ( 38 , 14 ) backgroundColor #ffffff {
+	labelPosition ( -10 , 1 )
+	methodLayout vCar {
+		pin powerCtrl ( Left , 2 )
+		pin brakeCtrl ( Left , 9 )
+		pin vCar ( Right , 5 )
+	}
+	memberLayout momentum {
+		getPinPosition ( Right , 2 )
+	}
+	memberLayout s {
+		getPinPosition ( Right , 9 )
+	}
+}

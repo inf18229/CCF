@@ -1,0 +1,159 @@
+classType myCar.myFullPower
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_1, connection_11
+		}
+	}
+complexIdentifier StopWatch_instance at (281, 381) size (11, 7) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) {
+				connection_6
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-90, -42) {
+				inPin connection_1
+			}
+		}
+	}
+	simpleIdentifier time at  (791, 405) {
+		label at (-10, 9)
+		inPin connection_6 {
+			bendpoints (390, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_5 {
+				bendpoints (20, 0), 
+			(20, 60)
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at  (81, 265) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at  (831, 245) {
+		label at (0, -1)
+		inPin connection_8 sequenceCall {
+			inPin connection_7 }
+	}
+	literal Numeric "100.0" at  (611, 243) size (59, 0) {
+		outPin {
+			connection_8
+		}
+	}
+	lessOrEqual at  (191, 266) {
+		inPin connection_10 {
+			bendpoints 
+		(0, -10), (70, -10)
+		}
+		inPin connection_9 {
+			bendpoints 
+		(60, 0)
+		}
+		outPin {
+			connection_16
+		}
+	}
+	literal Numeric "100.0" at  (71, 293) size (59, 0) {
+		outPin {
+			connection_9
+		}
+	}
+	ifElse at  (501, 221) {
+		inPin connection_17
+		{
+			bendpoints (0, 20)
+		}
+		ifControlFlowOutPin {
+			connection_7
+		}
+		elseControlFlowOutPin {
+			connection_20
+		, connection_18
+		}
+		sequenceCall {
+			inPin connection_11
+		}
+	}
+	simpleIdentifier time at  (101, 155) {
+		label at (0, -1)
+		inPin outPin {
+			connection_13
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "0.0" at  (131, 203) size (49, 0) {
+		outPin {
+			connection_14
+		}
+	}
+	lessOrEqual at  (211, 176) {
+		inPin connection_13 {
+			bendpoints 
+		(60, 0)
+		}
+		inPin connection_14 {
+			bendpoints 
+		(30, 0)
+		}
+		outPin {
+			connection_21
+		, connection_15
+		}
+	}
+	and at (411, 196) {
+		inPin connection_15 {
+			bendpoints 
+		(0, 10)
+		}
+		inPin connection_16 {
+			bendpoints 
+		(180, 0)
+		}
+		outPin {
+			connection_17
+		}
+	}
+	literal Numeric "0.0" at  (571, 303) size (49, 0) {
+		outPin {
+			connection_19
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at  (711, 305) {
+		label at (0, -1)
+		inPin connection_19 sequenceCall {
+			inPin connection_18 {
+				bendpoints (-40, 0), (-40, 30)
+			}
+		}
+	}
+	if at (411, 321) {
+		inPin 
+		connection_21 {
+			bendpoints (0, 140)
+		}
+		ifControlFlowOutPin {
+			connection_5
+		}
+		sequenceCall {
+			inPin connection_20
+		{
+				bendpoints (-120, 0)
+			}
+		}
+	}
+}
