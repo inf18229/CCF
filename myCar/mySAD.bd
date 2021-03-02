@@ -4,12 +4,14 @@ blockdiagramSpecification Main {
 		outPin active
 	{
 			connection_1
+		, connection_16, connection_18, connection_42
 		}
 	}
-simpleIdentifier on at  (101, 175) {
+simpleIdentifier on at   (151, 175) {
 		label at (0, -1)
 		outPin {
 			connection_2
+		, connection_39, connection_17
 		}
 		sequenceCall {
 			inPin
@@ -117,7 +119,8 @@ complexIdentifier myControl_instance at (521, 141) size (14, 8) {
 	simpleIdentifier vtarget at (351, 135) {
 		label at (0, -1)
 		outPin {
-			connection_9
+			connection_19
+		, connection_9
 		}
 		sequenceCall {
 			inPin
@@ -141,6 +144,53 @@ complexIdentifier myControl_instance at (521, 141) size (14, 8) {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+simpleIdentifier resources.DriverMessages.CCFState at (871, 405) {
+		label at (0, -1)
+		inPin connection_17 {
+			bendpoints (60, 0), (60, 230)
+		}
+		sequenceCall {
+			inPin connection_16
+		}
+	}
+	simpleIdentifier resources.DriverMessages.vTarget at (871, 455) {
+		label at (0, -1)
+		inPin connection_19 {
+			bendpoints (80, 0), (80, 320)
+		}
+		sequenceCall {
+			inPin connection_18
+		}
+	}
+	literal Boolean "true" at (341, 583) size (49, 0) {
+		outPin {
+			connection_38
+		}
+	}
+	conditionalSelect at (441, 551) {
+		inPin connection_44 {
+			bendpoints (0, -50), (-420, -50)
+		}
+		inPin CASE_CONDITION connection_39 {
+			bendpoints (60, 0), (60, 370)
+		}
+		inPin connection_38
+		outPin {
+			connection_43
+		}
+	}
+	simpleIdentifier resources.CarMessages.escActive at (811, 535) {
+		label at (0, -1)
+		inPin connection_43 {
+			bendpoints (210, 0), (210, -40)
+		}
+		outPin {
+			connection_44
+		}
+		sequenceCall {
+			inPin connection_42
 		}
 	}
 }

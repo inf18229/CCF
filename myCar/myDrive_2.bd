@@ -69,7 +69,8 @@ blockdiagramSpecification Main {
 	multiplication at (601, 66) {
 		inPin connection_26
 		inPin connection_28 {
-			bendpoints (50, 0)
+			bendpoints 
+		(50, 0)
 		}
 		inPin connection_34 {
 			bendpoints (30, 0), (30, -40)
@@ -250,7 +251,8 @@ blockdiagramSpecification Main {
 	multiplication at (141, 356) {
 		inPin connection_14
 		inPin connection_5 {
-			bendpoints (60, 0)
+			bendpoints 
+		(60, 0)
 		}
 		outPin {
 			connection_15
@@ -378,7 +380,9 @@ blockdiagramSpecification Main {
 			inPin
 		}
 	}
-simpleIdentifier   SystemLib.Miscellaneous.DeltaTimeService.deltaT at (501, 95) {
+
+	
+simpleIdentifier     SystemLib.Miscellaneous.DeltaTimeService.deltaT at (501, 95) {
 		label at (0, -1)
 		inPin outPin {
 			connection_28
@@ -387,7 +391,8 @@ simpleIdentifier   SystemLib.Miscellaneous.DeltaTimeService.deltaT at (501, 95) 
 			inPin
 		}
 	}
-	simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (31, 395) {
+	
+	simpleIdentifier   SystemLib.Miscellaneous.DeltaTimeService.deltaT at (31, 395) {
 		label at (0, -1)
 		inPin outPin {
 			connection_5
