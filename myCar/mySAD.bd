@@ -4,21 +4,16 @@ blockdiagramSpecification Main {
 		outPin active
 	{
 			connection_1
-		, connection_16, connection_18, connection_42
+		, connection_18, connection_42, connection_45
+		, connection_51
 		}
 	}
-simpleIdentifier on at   (151, 175) {
-		label at (0, -1)
-		outPin {
-			connection_2
-		, connection_39, connection_17
-		}
-		sequenceCall {
-			inPin
-		}
-	}
+
 	ifElse at  (281, 171) {
-		inPin connection_2
+		inPin 
+		connection_47 {
+			bendpoints (90, 0)
+		}
 		ifControlFlowOutPin {
 			connection_14
 		, connection_10, connection_12
@@ -148,11 +143,12 @@ complexIdentifier myControl_instance at (521, 141) size (14, 8) {
 	}
 simpleIdentifier resources.DriverMessages.CCFState at (871, 405) {
 		label at (0, -1)
-		inPin connection_17 {
-			bendpoints (60, 0), (60, 230)
+		inPin connection_52 {
+			bendpoints (0, 250)
 		}
 		sequenceCall {
-			inPin connection_16
+			inPin 
+		connection_51
 		}
 	}
 	simpleIdentifier resources.DriverMessages.vTarget at (871, 455) {
@@ -173,8 +169,8 @@ simpleIdentifier resources.DriverMessages.CCFState at (871, 405) {
 		inPin connection_44 {
 			bendpoints (0, -50), (-420, -50)
 		}
-		inPin CASE_CONDITION connection_39 {
-			bendpoints (60, 0), (60, 370)
+		inPin CASE_CONDITION connection_50 {
+			bendpoints (40, 0), (40, 390)
 		}
 		inPin connection_38
 		outPin {
@@ -191,6 +187,25 @@ simpleIdentifier resources.DriverMessages.CCFState at (871, 405) {
 		}
 		sequenceCall {
 			inPin connection_42
+		}
+	}
+simpleIdentifier on at (141, 155) {
+		label at (0, -1)
+		inPin connection_46
+		outPin {
+			connection_50, connection_52, connection_47
+		}
+		sequenceCall {
+			inPin connection_45
+		}
+	}
+	simpleIdentifier resources.DriverMessages.CCFSwitch at (41, 155) {
+		label at (0, -1)
+		outPin {
+			connection_46
+		}
+		sequenceCall {
+			inPin
 		}
 	}
 }

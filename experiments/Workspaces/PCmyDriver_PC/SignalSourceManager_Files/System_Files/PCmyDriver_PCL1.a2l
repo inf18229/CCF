@@ -57,16 +57,16 @@
 		    /end SOURCE
 		    /begin SOURCE "Task1"
 		        /* type   */ 3
-		        /* period */ 1000
+		        /* period */ 2000
 		        QP_BLOB 2
 		    /end SOURCE
 		    /begin SOURCE "Task2"
 		        /* type   */ 3
-		        /* period */ 2000
+		        /* period */ 3000
 		        QP_BLOB 3
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 2709536064
+		         /* programm id */ 2709535814
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -488,21 +488,6 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
-		/begin CHARACTERISTIC myCar.mySAD.on
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_U8
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ 0
-			/* upper limit        */ 1
-			BIT_MASK 0x1
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
-			/end IF_DATA
-		/end CHARACTERISTIC
-
 		/begin CHARACTERISTIC myCar.mySAD.vtarget
 			/* long identifier    */ ""
 			/* type               */ VALUE
@@ -516,6 +501,21 @@
 			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
 			/end IF_DATA
 		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.mySAD.on
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
 
 		/begin COMPU_METHOD esdl_ident
 			/* long identifier    */ ""
@@ -572,7 +572,6 @@
 		/begin FUNCTION myCar.mySAD
 			""
 			/begin DEF_CHARACTERISTIC
-				myCar.mySAD.on
 				myCar.mySAD.vtarget
 			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
@@ -588,6 +587,9 @@
 				resources.DriverMessages.CCFState
 				resources.DriverMessages.vTarget
 			/end OUT_MEASUREMENT
+			/begin LOC_MEASUREMENT
+				myCar.mySAD.on
+			/end LOC_MEASUREMENT
 			/begin SUB_FUNCTION
 				myCar.mySAD.myControl_instance
 			/end SUB_FUNCTION
@@ -617,9 +619,6 @@
 		/end RECORD_LAYOUT
 		/begin RECORD_LAYOUT STANDARD_VALUE_R32
 			/* value              */ FNC_VALUES 1 FLOAT32_IEEE COLUMN_DIR DIRECT
-		/end RECORD_LAYOUT
-		/begin RECORD_LAYOUT STANDARD_VALUE_U8
-			/* value              */ FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
 		/end RECORD_LAYOUT
 
 		/begin GROUP SystemLib.Miscellaneous.DeltaTimeService
@@ -664,9 +663,11 @@
 			""
 			ROOT
 			/begin REF_CHARACTERISTIC
-				myCar.mySAD.on
 				myCar.mySAD.vtarget
 			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				myCar.mySAD.on
+			/end REF_MEASUREMENT
 			/begin SUB_GROUP
 				myCar.mySAD.myControl_instance
 			/end SUB_GROUP

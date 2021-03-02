@@ -10,25 +10,13 @@
   <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionListType">
     <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionType" id="ID18d87edc-5178-46a6-9f2c-6b76bf32f967" name="SignalDescription" comment="">
       <signalSegments xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentListType">
-        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="3000000000" comment="" iterations="5">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="10000000000" comment="" iterations="1">
           <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
-            <pulse xsi:type="ETAS.EE.Data.SignalGenerator.WFPulseType">
-              <offset xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
-                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0" />
-              </offset>
-              <amplitude xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
-                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="2" />
-              </amplitude>
-              <period xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
-                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="1" />
-              </period>
-              <dutyCycle xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
-                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0.5" />
-              </dutyCycle>
-              <phase xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
-                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="0" />
-              </phase>
-            </pulse>
+            <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantType">
+              <value xsi:type="ETAS.EE.Data.SignalGenerator.WFPropertyValueType">
+                <constant xsi:type="ETAS.EE.Data.SignalGenerator.WFConstantValueType" value="100" />
+              </value>
+            </constant>
           </waveForm>
           <stopTrigger xsi:type="ETAS.EE.Data.SignalGenerator.StopTriggerListType" />
         </item>
@@ -36,18 +24,18 @@
     </item>
   </signalDescriptions>
   <signalMappings xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingListType">
-    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingType" id="IDed76dbc7-0617-454e-aadb-5b53328786fd" name="Mapping">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingType" id="ID97f908d3-e9a1-49d4-a1e3-776289ffe681" name="Mapping">
       <mappingItems xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemListType">
-        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="IDfacf88a1-748f-4145-9514-527153c7b75a" label="myCar.mySAD.on" task="Task0">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="IDf67363ff-a34a-48af-bae7-eaad0e3c7872" label="myCar.mySAD.vtarget" task="Task0">
           <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="ID18d87edc-5178-46a6-9f2c-6b76bf32f967" />
         </item>
       </mappingItems>
     </item>
   </signalMappings>
   <signalGenerators xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorListType">
-    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorType" id="ID1ab17d6f-258e-40d8-99a4-dfe635bf63db" instanceId="0" name="SignalGenerator" startTime="0" stopBehaviour="LastValue" enabled="true">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorType" id="IDf2e31e34-a528-41f9-9808-665fb2c44c71" instanceId="0" name="SignalGenerator" startTime="0" stopBehaviour="LastValue">
       <mapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorMappingContainerType" mappingChange="Dynamically">
-        <signalMapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingRefType" idRef="IDed76dbc7-0617-454e-aadb-5b53328786fd" />
+        <signalMapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingRefType" idRef="ID97f908d3-e9a1-49d4-a1e3-776289ffe681" />
       </mapping>
     </item>
   </signalGenerators>

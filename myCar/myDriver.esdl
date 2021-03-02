@@ -24,13 +24,15 @@ writes DriverMessages.power, DriverMessages.brake, DriverMessages.CCFSwitch{
 		DriverMessages.brake = 10.0;
 	}
 	
-	/*@thread
+	@thread
 	public void toggleSwitch(){
-		if(DriverMessages.CCFSwitch == false){
-			DriverMessages.CCFSwitch = true;
+		DriverMessages.CCFSwitch=!DriverMessages.CCFSwitch;
+	}
+	@thread
+	public void decoupling(){
+		if(DriverMessages.CCFSwitch){
+			DriverMessages.CCFSwitch=false;
+			DriverMessages.power=0.0;
 		}
-		if(DriverMessages.CCFSwitch == true){
-			DriverMessages.CCFSwitch = false;
-		}
-	}*/
+	}
 }
