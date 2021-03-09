@@ -3,48 +3,52 @@ import resources.DriverMessages;
 import SystemLib.CounterTimer.StopWatch;
 
 static class myDriver
-writes DriverMessages.power, DriverMessages.brake, DriverMessages.CCFSwitch{
+writes DriverMessages.power, DriverMessages.brake, DriverMessages.CCFSwitch
+reads DriverMessages.CCFSwitch{
 	
 	real v = 0.0;
 	real v_inc = 100.0/60.0;// Abtastrate 1 s
 	StopWatch watch;
 	real power = 0.0;
 	real brake = 0.0;
-	boolean CCFSwitch = false;
+	//boolean CCFSwitch = false;
 	
 	@thread
 	public void drive(){
 		calc();
 		watch.compute();
 		if (watch.value() < 5.0){
-			toggleSwitch();
+			DriverMessages.CCFSwitch=!DriverMessages.CCFSwitch;
 		}
 		if (watch.value() > 5.0 && watch.value() < 8.0){
-			decoupling();
+			if(DriverMessages.CCFSwitch){
+			DriverMessages.CCFSwitch=false;
+			power=0.0;
+		}
 		}
 		if (watch.value() > 8.0 && watch.value() < 12.0){
 			//brake and activate ccf
 			braking();
-			CCFSwitch = true;
+			DriverMessages.CCFSwitch = true;
 		}
 		if (watch.value() > 12.0 && watch.value() < 14.0){
 			// brake and deactivate ccf
 			braking();
-			CCFSwitch = false;
+			DriverMessages.CCFSwitch = false;
 		}
 		if (watch.value() > 14.0 && watch.value() < 18.0){
 			// no brake and activate ccf
 			brake = 0.0;
-			CCFSwitch = true;
+			DriverMessages.CCFSwitch = true;
 		}
 		if (watch.value() > 18.0 && watch.value() < 22.0){
-			// brake and therefore check if ccf is disabled
+			// brake and therfore check if ccf is disabled
 			braking();
 		}
 		
 		DriverMessages.power = power;
 		DriverMessages.brake = brake;
-		DriverMessages.CCFSwitch = CCFSwitch;
+		//DriverMessages.CCFSwitch = CCFSwitch;
 	}
 	
 	
@@ -63,16 +67,4 @@ writes DriverMessages.power, DriverMessages.brake, DriverMessages.CCFSwitch{
 		brake = 10.0;
 	}
 	
-	
-	public void toggleSwitch(){
-		CCFSwitch=!CCFSwitch;
-	}
-	
-
-	public void decoupling(){
-		if(CCFSwitch){
-			CCFSwitch=false;
-			power=0.0;
-		}
-	}
 }

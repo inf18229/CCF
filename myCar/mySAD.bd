@@ -7,6 +7,7 @@ blockdiagramSpecification Main {
 		, connection_55, connection_1, connection_18
 		, connection_42
 		, connection_51
+		, connection_68
 		}
 	}
 
@@ -215,14 +216,18 @@ simpleIdentifier on at  (311, 205) {
 			}
 		}
 	}
-	simpleIdentifier resources.DriverMessages.CCFSwitch at  (211, 205) {
+	simpleIdentifier resources.DriverMessages.CCFSwitch at   (201, 205) {
 		label at 
 		(-60, 9)
+		inPin connection_69 {
+			bendpoints (40, 0), (40, 70), (-650, 70), (-650, -300)
+		}
 		outPin {
 			connection_46
 		}
 		sequenceCall {
 			inPin
+		connection_68
 		}
 	}
 lessOrEqual at (301, 106) {
@@ -290,7 +295,9 @@ lessOrEqual at (301, 106) {
 	simpleIdentifier on at (711, 505) {
 		label at (0, -1)
 		inPin connection_64
-		outPin sequenceCall {
+		outPin {
+			connection_69
+		} sequenceCall {
 			inPin connection_63
 		}
 	}

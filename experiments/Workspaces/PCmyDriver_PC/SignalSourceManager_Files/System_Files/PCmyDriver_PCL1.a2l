@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3590337605
+		         /* programm id */ 3590337219
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -374,7 +374,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -388,7 +388,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -402,7 +402,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -415,21 +415,6 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
-			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 2
-			/end IF_DATA
-		/end MEASUREMENT
-
-		/begin MEASUREMENT myCar.myDriver.CCFSwitch
-			/* long identifier    */ ""
-			/* datatype           */ UBYTE
-			/* conversion         */ esdl_ident
-			/* resolution         */ 1
-			/* accuracy           */ 100.0
-			/* lower limit        */ 0
-			/* upper limit        */ 1
-			ECU_ADDRESS 0x0
-			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 1
 			/end IF_DATA
@@ -612,7 +597,6 @@
 				resources.DriverMessages.power
 			/end OUT_MEASUREMENT
 			/begin LOC_MEASUREMENT
-				myCar.myDriver.CCFSwitch
 				myCar.myDriver.brake
 				myCar.myDriver.power
 				myCar.myDriver.v
@@ -635,7 +619,6 @@
 			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
 				resources.CarMessages.v
-				resources.DriverMessages.CCFSwitch
 				resources.DriverMessages.brake
 				resources.DriverMessages.power
 			/end IN_MEASUREMENT
@@ -644,6 +627,7 @@
 				resources.CarMessages.escActive
 				resources.CarMessages.power
 				resources.DriverMessages.CCFState
+				resources.DriverMessages.CCFSwitch
 				resources.DriverMessages.vTarget
 			/end OUT_MEASUREMENT
 			/begin LOC_MEASUREMENT
@@ -714,7 +698,6 @@
 			""
 			ROOT
 			/begin REF_MEASUREMENT
-				myCar.myDriver.CCFSwitch
 				myCar.myDriver.brake
 				myCar.myDriver.power
 				myCar.myDriver.v

@@ -3,14 +3,14 @@ import resources.CarMessages;
 import resources.DriverMessages;
 
 static class mySAD
-writes CarMessages.power, CarMessages.brake, DriverMessages.CCFState, DriverMessages.vTarget, CarMessages.escActive
+writes CarMessages.power, CarMessages.brake, DriverMessages.CCFState, DriverMessages.vTarget, CarMessages.escActive, DriverMessages.CCFSwitch
 reads DriverMessages.power, DriverMessages.brake, CarMessages.v, DriverMessages.CCFSwitch, CarMessages.escActive {
 	myControl myControl_instance;
 	characteristic real vtarget = 0.0;
 	boolean on;
 
 	@thread
-	@generated("blockdiagram", "9125f5a2")
+	@generated("blockdiagram", "1fb507f7")
 	public void calc() {
 		if ((DriverMessages.brake > 0.0) && on) {
 			on = false; // Main/calc 1/if-then 1
@@ -29,5 +29,6 @@ reads DriverMessages.power, DriverMessages.brake, CarMessages.v, DriverMessages.
 		DriverMessages.vTarget = vtarget; // Main/calc 4
 		CarMessages.escActive = (if on then true else CarMessages.escActive); // Main/calc 5
 		DriverMessages.CCFState = on; // Main/calc 6
+		DriverMessages.CCFSwitch = on; // Main/calc 7
 	}
 }
