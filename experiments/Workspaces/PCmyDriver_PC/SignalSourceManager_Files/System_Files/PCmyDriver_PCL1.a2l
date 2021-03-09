@@ -55,18 +55,8 @@
 		        /* period */ 10
 		        QP_BLOB 1
 		    /end SOURCE
-		    /begin SOURCE "Task1"
-		        /* type   */ 3
-		        /* period */ 2000
-		        QP_BLOB 2
-		    /end SOURCE
-		    /begin SOURCE "Task2"
-		        /* type   */ 3
-		        /* period */ 3000
-		        QP_BLOB 3
-		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 2709535814
+		         /* programm id */ 3590337605
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -360,6 +350,20 @@
 			/end IF_DATA
 		/end MEASUREMENT
 
+		/begin MEASUREMENT myCar.myDriver.watch.timeCounter
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT64_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -1.7976931348623157E+308
+			/* upper limit        */ 1.7976931348623157E+308
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
 		/begin MEASUREMENT myCar.myDriver.v
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
@@ -370,7 +374,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -383,6 +387,49 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 5
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myDriver.power
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myDriver.brake
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myDriver.CCFSwitch
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 1
 			/end IF_DATA
@@ -565,8 +612,20 @@
 				resources.DriverMessages.power
 			/end OUT_MEASUREMENT
 			/begin LOC_MEASUREMENT
+				myCar.myDriver.CCFSwitch
+				myCar.myDriver.brake
+				myCar.myDriver.power
 				myCar.myDriver.v
 				myCar.myDriver.v_inc
+			/end LOC_MEASUREMENT
+			/begin SUB_FUNCTION
+				myCar.myDriver.watch
+			/end SUB_FUNCTION
+		/end FUNCTION
+		/begin FUNCTION myCar.myDriver.watch
+			"StopWatch increments the time counter by one dT."
+			/begin LOC_MEASUREMENT
+				myCar.myDriver.watch.timeCounter
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION myCar.mySAD
@@ -655,8 +714,20 @@
 			""
 			ROOT
 			/begin REF_MEASUREMENT
+				myCar.myDriver.CCFSwitch
+				myCar.myDriver.brake
+				myCar.myDriver.power
 				myCar.myDriver.v
 				myCar.myDriver.v_inc
+			/end REF_MEASUREMENT
+			/begin SUB_GROUP
+				myCar.myDriver.watch
+			/end SUB_GROUP
+		/end GROUP
+		/begin GROUP myCar.myDriver.watch
+			"StopWatch increments the time counter by one dT."
+			/begin REF_MEASUREMENT
+				myCar.myDriver.watch.timeCounter
 			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP myCar.mySAD
