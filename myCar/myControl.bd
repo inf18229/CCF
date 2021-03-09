@@ -26,7 +26,7 @@ simpleIdentifier power at (721, 105) {
 			}
 		}
 	}
-	methodArgumentIdentifier calc.vtarget at (141, 95) {
+	methodArgumentIdentifier calc.vtarget at  (141, 75) {
 		label at (0, -1)
 		outPin {
 			connection_1
@@ -35,7 +35,7 @@ simpleIdentifier power at (721, 105) {
 			inPin
 		}
 	}
-	methodArgumentIdentifier calc.v at (171, 185) {
+	methodArgumentIdentifier calc.v at  (171, 165) {
 		label at (-20, 9)
 		outPin {
 			connection_2
@@ -44,7 +44,7 @@ simpleIdentifier power at (721, 105) {
 			inPin
 		}
 	}
-	greater at (381, 106) {
+	greater at  (381, 86) {
 		inPin connection_1 {
 			bendpoints (200, 0)
 		}
@@ -56,10 +56,7 @@ simpleIdentifier power at (721, 105) {
 		}
 	}
 	ifElse at (511, 91) {
-		inPin connection_4 {
-			bendpoints (90, 0)
-		}
-		ifControlFlowOutPin {
+		inPin connection_4 ifControlFlowOutPin {
 			connection_5, connection_7
 		}
 		elseControlFlowOutPin {

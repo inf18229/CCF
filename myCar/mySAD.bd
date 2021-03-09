@@ -3,8 +3,9 @@ blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active
 	{
-			connection_55
-		, connection_1, connection_18, connection_42
+			connection_61
+		, connection_55, connection_1, connection_18
+		, connection_42
 		, connection_51
 		}
 	}
@@ -25,7 +26,7 @@ blockdiagramSpecification Main {
 			inPin connection_1
 		}
 	}
-	simpleIdentifier resources.CarMessages.power at   (921, 215) {
+	simpleIdentifier resources.CarMessages.power at   (1131, 235) {
 		label at (0, -1)
 		inPin connection_11 {
 			bendpoints (80, 0)
@@ -33,7 +34,8 @@ blockdiagramSpecification Main {
 		sequenceCall {
 			inPin 
 		connection_10 {
-				bendpoints (410, 0)
+				bendpoints 
+			(620, 0)
 			}
 		}
 	}
@@ -51,36 +53,41 @@ blockdiagramSpecification Main {
 		label at (0, -1)
 		outPin {
 			connection_53
-		, connection_4
+		, connection_57, connection_4
 		}
 		sequenceCall {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.brake at   (781, 385) {
+	simpleIdentifier resources.CarMessages.brake at   (991, 405) {
 		label at (0, -1)
-		inPin connection_4
+		inPin connection_4 {
+			bendpoints (670, 0)
+		}
 		sequenceCall {
 			inPin connection_3 {
 				bendpoints 
-			(0, 110)
+			
+			(0, 130)
 			}
 		}
 	}
-	simpleIdentifier resources.CarMessages.power at   (861, 325) {
+	simpleIdentifier resources.CarMessages.power at   (1071, 345) {
 		label at (0, -1)
 		inPin connection_6 {
 			bendpoints 
-		(540, 0)
+		
+		(750, 0)
 		}
 		sequenceCall {
 			inPin connection_5 {
 				bendpoints 
-			(0, 50)
+			
+			(0, 70)
 			}
 		}
 	}
-complexIdentifier myControl_instance at  (691, 191) size (14, 8) {
+complexIdentifier myControl_instance at  (901, 211) size (14, 8) {
 		label at (0, 1)
 		methodCall myCar.myControl.calc {
 			argumentPin vtarget at (left, 0) connection_9 {
@@ -91,7 +98,8 @@ complexIdentifier myControl_instance at  (691, 191) size (14, 8) {
 			}
 			sequenceCall at (-20, -44) {
 				inPin connection_14 {
-					bendpoints (10, 0), (10, -70)
+					bendpoints (10, 0), 
+				(10, -50)
 				}
 			}
 		}
@@ -112,7 +120,7 @@ complexIdentifier myControl_instance at  (691, 191) size (14, 8) {
 			}
 		}
 	}
-	simpleIdentifier vtarget at  (521, 185) {
+	simpleIdentifier vtarget at  (731, 205) {
 		label at (0, -1)
 		outPin {
 			connection_19
@@ -122,18 +130,19 @@ complexIdentifier myControl_instance at  (691, 191) size (14, 8) {
 			inPin
 		}
 	}
-	simpleIdentifier resources.CarMessages.brake at  (991, 275) {
+	simpleIdentifier resources.CarMessages.brake at  (1201, 295) {
 		label at (0, -1)
 		inPin connection_13 {
 			bendpoints (40, 0), (40, 70)
 		}
 		sequenceCall {
 			inPin connection_12 {
-				bendpoints (480, 0)
+				bendpoints 
+			(690, 0)
 			}
 		}
 	}
-	simpleIdentifier resources.CarMessages.v at  (531, 245) {
+	simpleIdentifier resources.CarMessages.v at  (741, 265) {
 		label at (0, -1)
 		outPin {
 			connection_15
@@ -142,17 +151,18 @@ complexIdentifier myControl_instance at  (691, 191) size (14, 8) {
 			inPin
 		}
 	}
-simpleIdentifier resources.DriverMessages.CCFState at  (1041, 455) {
+simpleIdentifier resources.DriverMessages.CCFState at  (1251, 475) {
 		label at (0, -1)
 		inPin connection_52 {
-			bendpoints (0, 250)
+			bendpoints 
+		(0, 270)
 		}
 		sequenceCall {
 			inPin 
 		connection_51
 		}
 	}
-	simpleIdentifier resources.DriverMessages.vTarget at  (1041, 505) {
+	simpleIdentifier resources.DriverMessages.vTarget at  (1251, 525) {
 		label at (0, -1)
 		inPin connection_19 {
 			bendpoints (80, 0), (80, 320)
@@ -161,24 +171,25 @@ simpleIdentifier resources.DriverMessages.CCFState at  (1041, 455) {
 			inPin connection_18
 		}
 	}
-	literal Boolean "true" at  (511, 633) size (49, 0) {
+	literal Boolean "true" at  (721, 653) size (49, 0) {
 		outPin {
 			connection_38
 		}
 	}
-	conditionalSelect at  (611, 601) {
+	conditionalSelect at  (821, 621) {
 		inPin connection_44 {
 			bendpoints (0, -50), (-420, -50)
 		}
 		inPin CASE_CONDITION connection_50 {
-			bendpoints (40, 0), (40, 390)
+			bendpoints (40, 0), 
+		(40, 410)
 		}
 		inPin connection_38
 		outPin {
 			connection_43
 		}
 	}
-	simpleIdentifier resources.CarMessages.escActive at  (981, 585) {
+	simpleIdentifier resources.CarMessages.escActive at  (1191, 605) {
 		label at (0, -1)
 		inPin connection_43 {
 			bendpoints (210, 0), (210, -40)
@@ -194,7 +205,8 @@ simpleIdentifier on at  (311, 205) {
 		label at (0, -1)
 		inPin connection_46
 		outPin {
-			connection_50, connection_52, connection_47
+			connection_50, connection_52, connection_60
+		, connection_47
 		}
 		sequenceCall {
 			inPin connection_45
@@ -234,6 +246,52 @@ lessOrEqual at (301, 106) {
 		}
 		sequenceCall {
 			inPin connection_55
+		}
+	}
+	greater at (461, 416) {
+		inPin connection_57 {
+			bendpoints (120, 0), (120, 30)
+		}
+		inPin connection_58
+		outPin {
+			connection_59
+		}
+	}
+	literal Numeric "0.0" at (411, 433) size (49, 0) {
+		outPin {
+			connection_58
+		}
+	}
+	and at (571, 436) {
+		inPin connection_59 {
+			bendpoints (40, 0), (40, 10)
+		}
+		inPin connection_60 {
+			bendpoints (0, 80), (-160, 80), (-160, 250)
+		}
+		outPin {
+			connection_62
+		}
+	}
+	if at (651, 441) {
+		inPin connection_62
+		ifControlFlowOutPin {
+			connection_63
+		}
+		sequenceCall {
+			inPin connection_61
+		}
+	}
+	literal Boolean "false" at (641, 503) size (49, 0) {
+		outPin {
+			connection_64
+		}
+	}
+	simpleIdentifier on at (711, 505) {
+		label at (0, -1)
+		inPin connection_64
+		outPin sequenceCall {
+			inPin connection_63
 		}
 	}
 }

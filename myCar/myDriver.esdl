@@ -37,6 +37,10 @@ writes DriverMessages.power, DriverMessages.brake, DriverMessages.CCFSwitch{
 			brake = 0.0;
 			CCFSwitch = true;
 		}
+		if (watch.value() > 18.0 && watch.value() < 22.0){
+			// brake and therefore check if ccf is disabled
+			braking();
+		}
 		
 		DriverMessages.power = power;
 		DriverMessages.brake = brake;
