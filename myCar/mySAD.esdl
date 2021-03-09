@@ -6,7 +6,7 @@ static class mySAD
 writes CarMessages.power, CarMessages.brake, DriverMessages.CCFState, DriverMessages.vTarget, CarMessages.escActive, DriverMessages.CCFSwitch
 reads DriverMessages.power, DriverMessages.brake, CarMessages.v, DriverMessages.CCFSwitch, CarMessages.escActive {
 	myControl myControl_instance;
-	characteristic real vtarget = 0.0;
+	characteristic real vtarget = 100.0;
 	boolean on;
 
 	@thread

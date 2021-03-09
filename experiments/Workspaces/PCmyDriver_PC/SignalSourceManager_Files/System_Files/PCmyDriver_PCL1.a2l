@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3590337219
+		         /* programm id */ 3590337605
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -644,6 +644,9 @@
 				myCar.mySAD.myControl_instance.power
 			/end LOC_MEASUREMENT
 		/end FUNCTION
+		/begin FUNCTION coverageLib.CoverageInstrumentation
+			""
+		/end FUNCTION
 		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
 		/end FUNCTION
@@ -666,6 +669,10 @@
 
 		/begin GROUP SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
+			ROOT
+		/end GROUP
+		/begin GROUP coverageLib.CoverageInstrumentation
+			""
 			ROOT
 		/end GROUP
 		/begin GROUP myCar.myCar

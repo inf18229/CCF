@@ -21,6 +21,7 @@ reads DriverMessages.CCFSwitch{
 			DriverMessages.CCFSwitch=!DriverMessages.CCFSwitch;
 		}
 		if (watch.value() > 5.0 && watch.value() < 8.0){
+			//decoupling
 			if(DriverMessages.CCFSwitch){
 			DriverMessages.CCFSwitch=false;
 			power=0.0;
