@@ -81,7 +81,7 @@ complexIdentifier myControl_instance at  (901, 211) size (14, 8) {
 	
 
 	
-	literal Boolean "true" at  (721, 653) size (49, 0) {
+	literal Boolean "true" at   (711, 703) size (49, 0) {
 		outPin {
 			connection_38
 		}
@@ -92,7 +92,9 @@ complexIdentifier myControl_instance at  (901, 211) size (14, 8) {
 			bendpoints (40, 0), 
 		(40, 410)
 		}
-		inPin connection_38
+		inPin connection_38 {
+			bendpoints (0, -50)
+		}
 		outPin {
 			connection_43
 		}
@@ -257,12 +259,13 @@ simpleIdentifier power_in at (281, 345) {
 			inPin connection_78
 		}
 	}
-	simpleIdentifier CCFState_out at (1251, 475) {
+	simpleIdentifier CCFState_out at  (1251, 455) {
 		label at (0, -1)
 		inPin connection_52 {
 			bendpoints 
 		
-		(0, 80), (360, 80), (360, 270)
+		(0, 80), (360, 80), 
+		(360, 248)
 		}
 		outPin sequenceCall {
 			inPin connection_79
@@ -274,7 +277,7 @@ simpleIdentifier power_in at (281, 345) {
 			inPin connection_81
 		}
 	}
-	simpleIdentifier escActive_in at (751, 635) {
+	simpleIdentifier escActive_in at  (601, 635) {
 		label at (0, -1)
 		inPin outPin {
 			connection_80

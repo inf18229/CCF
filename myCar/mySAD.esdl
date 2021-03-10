@@ -1,6 +1,6 @@
 package myCar;
 
-static class mySAD {
+class mySAD {
 	myControl myControl_instance;
 	characteristic real vtarget = 100.0;
 	boolean on;
@@ -27,7 +27,7 @@ static class mySAD {
 	@get
 	boolean CCFSwitch_out;
 
-	@generated("blockdiagram", "43ec3a91")
+	@generated("blockdiagram", "d67209f6")
 	public void calc() {
 		if (brake_in <= 0.0) {
 			on = CCFSwitch_in; // Main/calc 1/if-then 1

@@ -1,11 +1,15 @@
-package myCar;
+package UnitTests;
 import assertLib.Assert;
 
-static class UnitTest
+import myCar.myControl;
+
+static class myControllerTest
 {
 	myControl uut;
 	real power = 0.0;
 	real brake = 0.0;
+	
+	// Test my Controller
 	@Test
 	public void testcontrolPowerAbove(){
 		/* target velocity below actual */

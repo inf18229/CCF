@@ -1,7 +1,6 @@
 application {
 	class myCar.myCar
 	class myCar.myDriver
-	class myCar.mySAD
 	class myCar.SADController
 }
 schedule {
