@@ -20,29 +20,30 @@ reads DriverMessages.CCFSwitch{
 		if (watch.value() < 5.0){
 			DriverMessages.CCFSwitch=!DriverMessages.CCFSwitch;
 		}
-		if (watch.value() > 5.0 && watch.value() < 8.0){
+		if (watch.value() > 5.0 && watch.value() < 11.0){
 			//decoupling
+			DriverMessages.CCFSwitch = true;
 			if(DriverMessages.CCFSwitch){
-			DriverMessages.CCFSwitch=false;
-			power=0.0;
+				DriverMessages.CCFSwitch=false;
+				power=0.0;
+			}
 		}
-		}
-		if (watch.value() > 8.0 && watch.value() < 12.0){
+		if (watch.value() > 11.0 && watch.value() < 15.0){
 			//brake and activate ccf
 			braking();
 			DriverMessages.CCFSwitch = true;
 		}
-		if (watch.value() > 12.0 && watch.value() < 14.0){
+		if (watch.value() > 15.0 && watch.value() < 17.0){
 			// brake and deactivate ccf
 			braking();
 			DriverMessages.CCFSwitch = false;
 		}
-		if (watch.value() > 14.0 && watch.value() < 18.0){
+		if (watch.value() > 17.0 && watch.value() < 25.0){
 			// no brake and activate ccf
 			brake = 0.0;
 			DriverMessages.CCFSwitch = true;
 		}
-		if (watch.value() > 18.0 && watch.value() < 22.0){
+		if (watch.value() > 25.0 && watch.value() < 26.0){
 			// brake and therfore check if ccf is disabled
 			braking();
 		}

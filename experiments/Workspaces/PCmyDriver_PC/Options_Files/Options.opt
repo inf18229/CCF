@@ -4,7 +4,7 @@
     <PropertySet name="WorkspaceHandling">
       <Property name="OpenMode" type="StringProperty">LastExperiment</Property>
       <Property name="DefaultExperiment" type="StringProperty" />
-      <Property name="LastWorkspaceLocation" type="StringProperty">C:\Users\fschi\Documents\GitHub\CCF-Collab\experiments\Workspaces\PCmyDriver_PC\PCmyDriver_PC.eew</Property>
+      <Property name="LastWorkspaceLocation" type="StringProperty">C:\Users\Michael\Documents\GitHub\CCF\experiments\Workspaces\PCmyDriver_PC\PCmyDriver_PC.eew</Property>
     </PropertySet>
     <PropertySet name="ETargetINTECRIO">
       <PropertySet name="Options">
