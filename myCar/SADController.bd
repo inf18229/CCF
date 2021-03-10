@@ -1,0 +1,179 @@
+classType myCar.SADController
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_37
+		, connection_41, connection_45, connection_49, connection_53
+		, connection_34, connection_51, connection_55, connection_43, connection_47, connection_39, connection_35
+		}
+	}
+	simpleIdentifier resources.CarMessages.escActive at  (681, 245) {
+		label at (0, -1)
+		inPin connection_36
+		outPin {
+			connection_38
+		}
+		sequenceCall at (50, -4) {
+			inPin 
+		connection_35
+		}
+	}
+	
+	simpleIdentifier resources.DriverMessages.CCFSwitch at  (681, 205) {
+		label at (0, -1)
+		inPin connection_40
+		outPin {
+			connection_42
+		}
+		sequenceCall at (50, -4) {
+			inPin 
+		connection_39
+		}
+	}
+complexIdentifier myCar.mySAD at (311, 131) size (31, 22) {
+		label at (0, 1)
+		methodCall myCar.mySAD.calc {
+			methodVoidPin at (top, 0) sequenceCall at (-14, -36) {
+				inPin connection_34
+			}
+		}
+		elementCall (myCar.mySAD.brake_in) {
+			argumentPin at (left, 0) connection_54
+			sequenceCall at (-70, -30) {
+				inPin connection_53
+			}
+		}
+		elementCall (myCar.mySAD.breake_out) {
+			returnPin at (right, 0) {
+				connection_56
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (myCar.mySAD.CCFState_out) {
+			returnPin at (right, 4) {
+				connection_52
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (myCar.mySAD.CCFSwitch_out) {
+			returnPin at (right, 7) {
+				connection_40
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (myCar.mySAD.CCFSwitch_in) {
+			argumentPin at (left, 4) connection_42 {
+				bendpoints (70, 0), (70, -130), (-610, -130), (-610, -30)
+			}
+			sequenceCall at (-140, -14) {
+				inPin connection_41
+			}
+		}
+		elementCall (myCar.mySAD.escActive_in) {
+			argumentPin at (left, 9) connection_38 {
+				bendpoints (70, 0), (70, 170), (-610, 170), (-610, -20)
+			}
+			sequenceCall at (-270, -4) {
+				inPin connection_37
+			}
+		}
+		elementCall (myCar.mySAD.escActive_out) {
+			returnPin at (right, 11) {
+				connection_36
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (myCar.mySAD.power_in) {
+			argumentPin at (left, 14) connection_46
+			sequenceCall at (-70, -30) {
+				inPin connection_45
+			}
+		}
+		elementCall (myCar.mySAD.power_out) {
+			returnPin at (right, 15) {
+				connection_44
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (myCar.mySAD.v) {
+			argumentPin at (left, 18) connection_50
+			sequenceCall at (-50, -30) {
+				inPin connection_49
+			}
+		}
+		elementCall (myCar.mySAD.vtarget_out) {
+			returnPin at (right, 18) {
+				connection_48
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (681, 285) {
+		label at (0, -1)
+		inPin connection_44
+		sequenceCall at (40, -4) {
+			inPin connection_43
+		}
+	}
+	simpleIdentifier resources.DriverMessages.power at (241, 275) {
+		label at (0, -1)
+		outPin {
+			connection_46
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.DriverMessages.vTarget at (681, 315) {
+		label at (0, -1)
+		inPin connection_48
+		sequenceCall at (40, -4) {
+			inPin connection_47
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (241, 315) {
+		label at (0, -1)
+		outPin {
+			connection_50
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.DriverMessages.CCFState at (681, 175) {
+		label at (0, -1)
+		inPin connection_52
+		sequenceCall at (50, -4) {
+			inPin connection_51
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (681, 135) {
+		label at (0, -1)
+		inPin connection_56
+		sequenceCall at (50, -4) {
+			inPin connection_55
+		}
+	}
+	simpleIdentifier resources.DriverMessages.brake at (251, 135) {
+		label at (0, -1)
+		outPin {
+			connection_54
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

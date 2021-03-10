@@ -530,7 +530,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 12
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -545,7 +545,166 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 8
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.v
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 11
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.power_in
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 9
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.brake_in
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 4
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.power_out
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 10
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.breake_out
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 5
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.vtarget_out
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 13
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.CCFState_out
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.escActive_out
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 7
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.escActive_in
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 6
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.CCFSwitch_in
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.mySAD.CCFSwitch_out
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -617,6 +776,33 @@
 			/begin DEF_CHARACTERISTIC
 				myCar.mySAD.vtarget
 			/end DEF_CHARACTERISTIC
+			/begin LOC_MEASUREMENT
+				myCar.mySAD.CCFState_out
+				myCar.mySAD.CCFSwitch_in
+				myCar.mySAD.CCFSwitch_out
+				myCar.mySAD.brake_in
+				myCar.mySAD.breake_out
+				myCar.mySAD.escActive_in
+				myCar.mySAD.escActive_out
+				myCar.mySAD.on
+				myCar.mySAD.power_in
+				myCar.mySAD.power_out
+				myCar.mySAD.v
+				myCar.mySAD.vtarget_out
+			/end LOC_MEASUREMENT
+			/begin SUB_FUNCTION
+				myCar.mySAD.myControl_instance
+			/end SUB_FUNCTION
+		/end FUNCTION
+		/begin FUNCTION myCar.mySAD.myControl_instance
+			""
+			/begin LOC_MEASUREMENT
+				myCar.mySAD.myControl_instance.brake
+				myCar.mySAD.myControl_instance.power
+			/end LOC_MEASUREMENT
+		/end FUNCTION
+		/begin FUNCTION myCar.SADController
+			""
 			/begin IN_MEASUREMENT
 				resources.CarMessages.v
 				resources.DriverMessages.brake
@@ -630,25 +816,12 @@
 				resources.DriverMessages.CCFSwitch
 				resources.DriverMessages.vTarget
 			/end OUT_MEASUREMENT
-			/begin LOC_MEASUREMENT
-				myCar.mySAD.on
-			/end LOC_MEASUREMENT
-			/begin SUB_FUNCTION
-				myCar.mySAD.myControl_instance
-			/end SUB_FUNCTION
-		/end FUNCTION
-		/begin FUNCTION myCar.mySAD.myControl_instance
-			""
-			/begin LOC_MEASUREMENT
-				myCar.mySAD.myControl_instance.brake
-				myCar.mySAD.myControl_instance.power
-			/end LOC_MEASUREMENT
-		/end FUNCTION
-		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
-			"Provides the delta time variable"
 		/end FUNCTION
 		/begin FUNCTION coverageLib.CoverageInstrumentation
 			""
+		/end FUNCTION
+		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
+			"Provides the delta time variable"
 		/end FUNCTION
 
 		/begin RECORD_LAYOUT STANDARD_CURVE_R32R32
@@ -672,6 +845,10 @@
 			ROOT
 		/end GROUP
 		/begin GROUP coverageLib.CoverageInstrumentation
+			""
+			ROOT
+		/end GROUP
+		/begin GROUP myCar.SADController
 			""
 			ROOT
 		/end GROUP
@@ -727,7 +904,18 @@
 				myCar.mySAD.vtarget
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
+				myCar.mySAD.CCFState_out
+				myCar.mySAD.CCFSwitch_in
+				myCar.mySAD.CCFSwitch_out
+				myCar.mySAD.brake_in
+				myCar.mySAD.breake_out
+				myCar.mySAD.escActive_in
+				myCar.mySAD.escActive_out
 				myCar.mySAD.on
+				myCar.mySAD.power_in
+				myCar.mySAD.power_out
+				myCar.mySAD.v
+				myCar.mySAD.vtarget_out
 			/end REF_MEASUREMENT
 			/begin SUB_GROUP
 				myCar.mySAD.myControl_instance
