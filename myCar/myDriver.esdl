@@ -14,6 +14,7 @@ reads DriverMessages.CCFSwitch, DriverMessages.CCFState, CarMessages.v{
 	real power = 0.0;
 	real brake = 0.0;
 	boolean TestCorrect = true;
+	boolean finished = false;
 	
 	@thread
 	public void drive(){
@@ -95,6 +96,9 @@ reads DriverMessages.CCFSwitch, DriverMessages.CCFState, CarMessages.v{
 			if(v_temp > CarMessages.v){
 				TestCorrect = false;
 			}
+		}
+		if (watch.value() > 29.0){
+			finished = true;
 		}
 		
 		

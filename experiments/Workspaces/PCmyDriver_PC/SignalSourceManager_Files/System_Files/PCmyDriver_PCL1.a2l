@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3590337605
+		         /* programm id */ 3716166358
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -374,7 +374,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -388,7 +388,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -402,7 +402,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -416,7 +416,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -446,6 +446,21 @@
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myDriver.finished
+			/* long identifier    */ ""
+			/* datatype           */ UBYTE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ 0
+			/* upper limit        */ 1
+			ECU_ADDRESS 0x0
+			BIT_MASK 0x1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -791,6 +806,7 @@
 			/begin LOC_MEASUREMENT
 				myCar.myDriver.TestCorrect
 				myCar.myDriver.brake
+				myCar.myDriver.finished
 				myCar.myDriver.power
 				myCar.myDriver.v
 				myCar.myDriver.v_inc
@@ -855,11 +871,11 @@
 				myCar.SADController.mySAD_instance.myControl_instance.power
 			/end LOC_MEASUREMENT
 		/end FUNCTION
-		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
-			"Provides the delta time variable"
-		/end FUNCTION
 		/begin FUNCTION coverageLib.CoverageInstrumentation
 			""
+		/end FUNCTION
+		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
+			"Provides the delta time variable"
 		/end FUNCTION
 
 		/begin RECORD_LAYOUT STANDARD_CURVE_R32R32
@@ -955,6 +971,7 @@
 			/begin REF_MEASUREMENT
 				myCar.myDriver.TestCorrect
 				myCar.myDriver.brake
+				myCar.myDriver.finished
 				myCar.myDriver.power
 				myCar.myDriver.v
 				myCar.myDriver.v_inc
