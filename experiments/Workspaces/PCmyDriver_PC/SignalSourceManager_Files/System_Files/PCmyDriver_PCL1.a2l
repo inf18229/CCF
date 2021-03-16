@@ -365,8 +365,8 @@
 			/* conversion         */ esdl_ident
 			/* resolution         */ 1
 			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
+			/* lower limit        */ 0.0
+			/* upper limit        */ 200.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 11
@@ -507,8 +507,8 @@
 			/* conversion         */ esdl_ident
 			/* resolution         */ 1
 			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
+			/* lower limit        */ 0.0
+			/* upper limit        */ 200.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 0 1001 3
@@ -736,8 +736,8 @@
 			/* conversion         */ esdl_ident
 			/* resolution         */ 1
 			/* accuracy           */ 100.0
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
+			/* lower limit        */ 0.0
+			/* upper limit        */ 200.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
 			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 1 1001 4

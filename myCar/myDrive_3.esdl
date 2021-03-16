@@ -1,6 +1,7 @@
 package myCar;
 import resources.curve_real;
 import resources.map_real_real;
+import resources.vType;
 
 class myDrive_3 {
 	characteristic curve_real BrakeMomentum = {{0.0, 1.0, 40.0, 60.0, 80.0, 100.0}, {0.0, 0.0, -1.0, -2.0, -3.0, -4.0}};
@@ -8,7 +9,7 @@ class myDrive_3 {
 	@get
 	real momentum = 0.0;
 	@get
-	real v = 0.0;
+	vType v = 0.0;
 	characteristic curve_real AirFriction = {{0.0, 30.0, 60.0, 90.0, 120.0, 150.0}, {0.0, -0.1, -0.2, -0.4, -0.8, -1.6}};
 	real h = 0.0;
 	real dh = 0.0;
@@ -19,23 +20,20 @@ class myDrive_3 {
 	characteristic real TrackSize = 1000.0;
 	characteristic real g = 9.81;
 
-	@generated("blockdiagram", "f1550a44")
+	@generated("blockdiagram", "b64865cb")
 	public void calc() {
 	}
 
-	@generated("blockdiagram", "fa486435")
+	@generated("blockdiagram", "b5b4f48b")
 	public void move(real in brakeCtrl, real in powerCtrl, real in dtime) {
-		if (v < 0.0) {
-			v = 0.0; // Main/move 1/if-then 1
-		} // Main/move 1
 		if (s > TrackSize) {
-			s = 0.0; // Main/move 2/if-then 1
-		} // Main/move 2
-		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 3
-		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (g * (dh / ds))) * dtime * 3.6) + v); // Main/move 4
-		dh = (h - Landscape.getAt(s)); // Main/move 5
-		h = Landscape.getAt(s); // Main/move 6
-		ds = ((v * dtime) / 3.6); // Main/move 7
-		s = (ds + s); // Main/move 8
+			s = 0.0; // Main/move 1/if-then 1
+		} // Main/move 1
+		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 2
+		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (g * (dh / ds))) * dtime * 3.6) + v); // Main/move 3
+		dh = (h - Landscape.getAt(s)); // Main/move 4
+		h = Landscape.getAt(s); // Main/move 5
+		ds = ((v * dtime) / 3.6); // Main/move 6
+		s = (ds + s); // Main/move 7
 	}
 }

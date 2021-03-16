@@ -4,7 +4,7 @@ blockdiagramSpecification Main {
 		outPin }
 methodBody move {
 		outPin active {
-			connection_2, connection_3, connection_8, connection_14, connection_22, connection_25, connection_36, connection_38
+			connection_3, connection_8, connection_14, connection_22, connection_25, connection_36, connection_38
 		}
 	}
 	simpleIdentifier BrakeMomentum at (181, 31) {
@@ -233,15 +233,6 @@ methodBody move {
 			inPin connection_38
 		}
 	}
-	simpleIdentifier v at (551, 205) {
-		label at (20, -1)
-		inPin outPin {
-			connection_33
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
 	multiplication at (141, 356) {
 		inPin connection_29
 		inPin connection_52 {
@@ -271,45 +262,9 @@ methodBody move {
 			connection_39
 		}
 	}
-	less at (631, 236) {
-		inPin connection_33 {
-			bendpoints (30, 0), (30, 30)
-		}
-		inPin connection_44 {
-			bendpoints (0, -20)
-		}
-		outPin {
-			connection_40
-		}
-	}
-	if at (701, 241) {
-		inPin connection_40 {
-			bendpoints (20, 0)
-		}
-		ifControlFlowOutPin {
-			connection_41
-		}
-		sequenceCall {
-			inPin connection_2
-		}
-	}
 	literal Numeric "3.6" at (131, 413) size (49, 0) {
 		outPin {
 			connection_42
-		}
-	}
-	literal Numeric "0.0" at (551, 273) size (49, 0) {
-		outPin {
-			connection_44, connection_43
-		}
-	}
-	simpleIdentifier v at (811, 275) {
-		label at (20, -1)
-		inPin connection_43
-		outPin sequenceCall at (-10, -14) {
-			inPin connection_41 {
-				bendpoints (20, 0), (20, 20)
-			}
 		}
 	}
 	simpleIdentifier s at (471, 325) {
