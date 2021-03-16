@@ -1,0 +1,39 @@
+<?SCHEMA schemaVersion="1.0"?>
+<SGConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.CommonSignalGenerator.xsd" xsi:type="ETAS.EE.Data.SignalGenerator.SGConfigurationType">
+  <signalDescriptionSets xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionSetType" id="IDc31cadc9-4c54-4a5f-a0f3-518781ecef00" name="SignalDescriptionSet" comment="" repetitions="1">
+      <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="IDba87bc90-009b-4f19-a6fe-3955bada7e88" />
+      </signalDescriptions>
+    </item>
+  </signalDescriptionSets>
+  <signalDescriptions xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionType" id="IDba87bc90-009b-4f19-a6fe-3955bada7e88" name="SignalDescription" comment="">
+      <signalSegments xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalSegmentType" duration="0" comment="" iterations="1">
+          <waveForm xsi:type="ETAS.EE.Data.SignalGenerator.WaveFormType">
+            <data xsi:type="ETAS.EE.Data.SignalGenerator.WFDataType" id="IDd9e7e739-89bf-43e2-91d9-fe8dac224d98" interpolationType="Forward" samplingPoints="1926" signalMinRange="0" signalMaxRange="16" lastTimeStamp="19251000000" importFileName="C:\ETAS\workspace\Git\CCF\experiments\Experiments\system\DataLoggerTestTest_PC\DataRecording0001.dat" variableName="Lrrr_DataLoggerTestTest_tester_c" importDate="2021-03-16T12:17:31.828Z" />
+          </waveForm>
+          <stopTrigger xsi:type="ETAS.EE.Data.SignalGenerator.StopTriggerListType" />
+        </item>
+      </signalSegments>
+    </item>
+  </signalDescriptions>
+  <signalMappings xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingType" id="IDf11430f8-520b-4b8e-ae9a-dbf093bf70b4" name="Mapping">
+      <mappingItems xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemListType">
+        <item xsi:type="ETAS.EE.Data.SignalGenerator.MappingItemType" id="IDf32f0121-b07f-43a2-9e3d-96a1a33f956b" label="Lrrr.DataLoggerTestTest.tester.c" task="Task0">
+          <signalDescription xsi:type="ETAS.EE.Data.SignalGenerator.SignalDescriptionRefType" idRef="IDba87bc90-009b-4f19-a6fe-3955bada7e88" />
+        </item>
+      </mappingItems>
+    </item>
+  </signalMappings>
+  <signalGenerators xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorListType">
+    <item xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorType" id="ID36e885db-f3a8-4d81-8527-5568f43f4d7c" instanceId="0" name="SignalGenerator" startTime="0" stopBehaviour="LastValue">
+      <mapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalGeneratorMappingContainerType" mappingChange="Dynamically">
+        <signalMapping xsi:type="ETAS.EE.Data.SignalGenerator.SignalMappingRefType" idRef="IDf11430f8-520b-4b8e-ae9a-dbf093bf70b4" />
+      </mapping>
+    </item>
+  </signalGenerators>
+  <signalAssignments xsi:type="ETAS.EE.Data.SignalGenerator.SignalLinkListType" />
+</SGConfiguration>

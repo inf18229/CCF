@@ -1,0 +1,49 @@
+classType FileInterpolation.ReadHeight
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_2
+		}
+	}
+
+	simpleIdentifier c at  (101, 65) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at   (421, 65) {
+		label at (0, -1)
+		inPin connection_3
+		outPin sequenceCall {
+			inPin 
+		connection_2
+		}
+	}
+complexIdentifier Height at  (201, 61) size (14, 8) {
+		label at (0, 1)
+		methodCall FileInterpolation.FileInterpolation.output {
+			argumentPin x at (left, 0) connection_1
+			returnPin at (right, 0) {
+				connection_3
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall FileInterpolation.FileInterpolation.mininput {
+			returnPin at (right, 1) sequenceCall {
+				inPin
+			}
+		}
+		methodCall FileInterpolation.FileInterpolation.maxinput {
+			returnPin at (right, 2) sequenceCall {
+				inPin
+			}
+		}
+	}
+}

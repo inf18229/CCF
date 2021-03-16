@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID3c201786-905f-449a-b149-ced85fc7ac10" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="IDbea87d42-9d0e-4b64-946b-1a9e26c7a525" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDef5051c8-0254-48d9-aecd-7e921b2192ef" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID3db18901-4184-4c7b-88a3-93196d064efa" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="IDfdb79301-97cf-4241-80aa-d0a87d2c6d27" path="C:\ETAS\workspace\Git\CCF\experiments\Experiments\system\DataLoggerTestTest_PC\DataLoggerTestTest_PC.eex" hintPath="..\..\Experiments\system\DataLoggerTestTest_PC\DataLoggerTestTest_PC.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID9b620309-6548-4721-af56-50cc869f9d7a" Created="2021-03-16T12:13:13.864Z" LastOpened="2021-03-16T12:13:13.864Z" LastSaved="2021-03-16T12:36:08.646Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID3bd541a7-7ac2-497b-b93c-13ffda6567e3" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

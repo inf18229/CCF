@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PropertySets>
+  <PropertySet name="Options">
+    <PropertySet name="RecentDirectories">
+      <PropertySet name="Contexts">
+        <PropertySet name="Datalogger">
+          <Property name="RecordingFileDirectory" type="StringProperty">.\</Property>
+        </PropertySet>
+      </PropertySet>
+    </PropertySet>
+  </PropertySet>
+</PropertySets>

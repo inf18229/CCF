@@ -2,6 +2,7 @@ application {
 	class myCar.myCar
 	class myCar.myDriver
 	class myCar.SADController
+	class myCar.RTMon
 }
 schedule {
 	startup {
@@ -12,5 +13,6 @@ schedule {
 		process myCar.SADController.calc
 		process myCar.myDriver.drive
 		process myCar.myCar.calc
+		process myCar.RTMon.monitor
 	}
 }

@@ -12,9 +12,11 @@
       </Documents>
     </Item>
   </PluginData>
-  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType" />
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID59f9ef05-0e6c-4919-9981-dad216d19ee4" path="C:\ETAS\workspace\Git\CCF\experiments\Experiments\system\myDbleTest_PC\myDbleTest_PC.eex" hintPath="..\..\Experiments\system\myDbleTest_PC\myDbleTest_PC.eex" />
+  </RecentExperiments>
   <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
-    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID236935f7-e7a4-42a2-8e49-6a6b1602ed57" Created="2021-03-16T10:51:18.614Z" LastOpened="2021-03-16T10:51:18.614Z" LastSaved="2021-03-16T10:51:19.061Z" />
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="ID236935f7-e7a4-42a2-8e49-6a6b1602ed57" Created="2021-03-16T10:51:18.614Z" LastOpened="2021-03-16T11:58:21.114Z" LastSaved="2021-03-16T12:13:13.775Z" />
     <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID29055699-4aec-4353-aecf-3004d081dbad" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
   </WorkspaceInfo>
 </Workspace>

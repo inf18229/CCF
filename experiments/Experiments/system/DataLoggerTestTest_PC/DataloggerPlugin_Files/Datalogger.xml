@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<DataloggerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Datalogger.xsd" xsi:type="ETAS.EE.Data.DataloggerType">
+  <DataloggerCombinations xsi:type="ETAS.EE.Data.DataloggerCombinationListType">
+    <DataloggerCombinationData xsi:type="ETAS.EE.Data.DataloggerCombinationType" id="ID4c62c814-9d70-4211-83f2-25ebb192715d" name="New Datalogger 1" numberOfAutomaticRestarts="0">
+      <recordingSignals xsi:type="ETAS.EE.Data.RecordingSignalListType">
+        <recordingSignal xsi:type="ETAS.EE.Data.RecordingSignalType" id="IDe802e492-9281-462c-baab-845c179100b3" label="Lrrr.DataLoggerTestTest.tester.v" signalSourceID="System" SignalSourceType="VP" task="Task0" enabled="false">
+          <userDefinedLabels xsi:type="ETAS.EE.Data.UserDefinedLabelListType" />
+        </recordingSignal>
+        <recordingSignal xsi:type="ETAS.EE.Data.RecordingSignalType" id="ID980155b6-0626-42eb-bc6b-9c1c75d3ba44" label="Lrrr.DataLoggerTestTest.tester.c" signalSourceID="System" SignalSourceType="VP" task="Task0" enabled="false">
+          <userDefinedLabels xsi:type="ETAS.EE.Data.UserDefinedLabelListType" />
+        </recordingSignal>
+      </recordingSignals>
+      <startTriggerFilterTemplate xsi:type="ETAS.EE.Data.DLFilterTemplateType" id="ID0504eda7-3693-484e-b3cc-4f2d47405f5a" name="Default Start" inActiveBehaviour="Block" activeBehaviour="Block" triggerOccuredBehaviour="Pass" postTime="0" preTime="0">
+        <operand1 xsi:type="ETAS.EE.Data.RecordingSignalRefType" />
+      </startTriggerFilterTemplate>
+      <stopTriggerFilterTemplate xsi:type="ETAS.EE.Data.DLFilterTemplateType" id="ID40197e2f-bb4e-48fc-a0ff-80637a7154df" name="Default Stop" inActiveBehaviour="Pass" activeBehaviour="Block" triggerOccuredBehaviour="Block" postTime="0">
+        <operand1 xsi:type="ETAS.EE.Data.RecordingSignalRefType" />
+      </stopTriggerFilterTemplate>
+      <recordingFileConfiguration xsi:type="ETAS.EE.Data.RecordingFileConfigurationType" file=".\DataRecording.dat" autoIncrement="true" numberOfDigits="4" fileType="MDF" />
+    </DataloggerCombinationData>
+  </DataloggerCombinations>
+</DataloggerData>

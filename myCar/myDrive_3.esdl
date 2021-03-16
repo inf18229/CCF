@@ -2,6 +2,8 @@ package myCar;
 import resources.curve_real;
 import resources.map_real_real;
 import resources.vType;
+import WriteData.WriteData;
+import SystemLib.CounterTimer.StopWatch;
 
 class myDrive_3 {
 	characteristic curve_real BrakeMomentum = {{0.0, 1.0, 40.0, 60.0, 80.0, 100.0}, {0.0, 0.0, -1.0, -2.0, -3.0, -4.0}};
@@ -17,21 +19,26 @@ class myDrive_3 {
 	real s = 0.0;
 	real ds = 0.0;
 	characteristic real g = 9.81;
+	WriteData WriteData_instance;
+	StopWatch StopWatch_instance;
 
-	@generated("blockdiagram", "7f2b02a8")
+	@generated("blockdiagram", "8f06e308")
 	public void calc() {
 	}
 
-	@generated("blockdiagram", "0c8907e5")
+	@generated("blockdiagram", "2ee1f801")
 	public void move(real in brakeCtrl, real in powerCtrl, real in dtime, real in length, real in height) {
+		StopWatch_instance.compute(); // Main/move 1
+		WriteData_instance.writeData(StopWatch_instance.value(), s); // Main/move 2
 		if (s > length) {
-			s = 0.0; // Main/move 1/if-then 1
-		} // Main/move 1
-		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 2
-		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (g * (dh / ds))) * dtime * 3.6) + v); // Main/move 3
-		dh = (h - height); // Main/move 4
-		ds = ((v * dtime) / 3.6); // Main/move 5
-		s = (ds + s); // Main/move 6
-		h = height; // Main/move 7
+			s = 0.0; // Main/move 3/if-then 1
+		} // Main/move 3
+		momentum = EngineMomentum.getAt(powerCtrl, v); // Main/move 4
+		v = (((BrakeMomentum.getAt(brakeCtrl) + momentum + AirFriction.getAt(v) + (g * (dh / ds))) * dtime * 3.6) + v); // Main/move 5
+		dh = (h - height); // Main/move 6
+		ds = ((v * dtime) / 3.6); // Main/move 7
+		s = (ds + s); // Main/move 8
+		h = height; // Main/move 9
+		WriteData_instance.writeData(StopWatch_instance.value(), s); // Main/move 10
 	}
 }

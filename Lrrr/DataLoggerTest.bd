@@ -1,0 +1,25 @@
+classType Lrrr.DataLoggerTest
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_1
+		}
+	}
+simpleIdentifier c at (291, 185) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at (471, 185) {
+		label at (0, -1)
+		inPin connection_2
+		outPin sequenceCall {
+			inPin connection_1
+		}
+	}
+}

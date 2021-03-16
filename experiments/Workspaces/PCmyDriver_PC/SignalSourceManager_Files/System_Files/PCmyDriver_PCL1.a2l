@@ -85,6 +85,20 @@
 		    ALIGNMENT_FLOAT64_IEEE 8 
 		/end MOD_COMMON
 
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.StopWatch_instance.timeCounter
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT64_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -1.7976931348623157E+308
+			/* upper limit        */ 1.7976931348623157E+308
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 4 1000 0 1000 0 1000 0
+			/end IF_DATA
+		/end MEASUREMENT
+
 		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.BrakeMomentum
 			/* long identifier    */ ""
 			/* type               */ CURVE
@@ -103,7 +117,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 2
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -133,7 +147,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 2
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -147,7 +161,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 7
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 8
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -161,7 +175,7 @@
 			/* upper limit        */ 200.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 10
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -183,7 +197,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 0
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -197,7 +211,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -211,7 +225,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -225,7 +239,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 9
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -239,7 +253,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -253,7 +267,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 5
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 6
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -275,7 +289,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -289,7 +303,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 2
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -303,7 +317,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -317,7 +331,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -388,7 +402,7 @@
 			/* upper limit        */ 1.7976931348623157E+308
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 4 1000 0 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 5 1000 0 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -402,7 +416,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -416,7 +430,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 7
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -430,7 +444,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -444,7 +458,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -458,7 +472,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -473,7 +487,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -488,7 +502,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 4 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 5 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -574,7 +588,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 2 1000 0 1000 0 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 3 1000 0 1000 0 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -588,7 +602,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 2 1000 0 1000 0 1000 0
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 6 1001 0 1001 0 1001 3 1000 0 1000 0 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -602,7 +616,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 12
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 12
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -617,7 +631,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 8
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -631,7 +645,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 11
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 11
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -645,7 +659,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 9
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -659,7 +673,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 4
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -673,7 +687,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 10
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 10
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -687,7 +701,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -701,7 +715,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 13
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 13
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -716,7 +730,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 1
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 1
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -731,7 +745,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 7
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -746,7 +760,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -761,7 +775,7 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 2
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 2
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -776,7 +790,78 @@
 			ECU_ADDRESS 0x0
 			BIT_MASK 0x1
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 2 1000 0 1000 3
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.RTMon.time
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 4
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.RTMon.lastfailtime
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 2
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.RTMon.mydelta
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.RTMon.expected
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 1
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.RTMon.emem
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			MATRIX_DIM 3 1 1
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 2 1000 0
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -825,6 +910,19 @@
 				myCar.myCar.myDrive_3_instance.momentum
 				myCar.myCar.myDrive_3_instance.s
 				myCar.myCar.myDrive_3_instance.v
+			/end LOC_MEASUREMENT
+			/begin SUB_FUNCTION
+				myCar.myCar.myDrive_3_instance.StopWatch_instance
+				myCar.myCar.myDrive_3_instance.WriteData_instance
+			/end SUB_FUNCTION
+		/end FUNCTION
+		/begin FUNCTION myCar.myCar.myDrive_3_instance.WriteData_instance
+			""
+		/end FUNCTION
+		/begin FUNCTION myCar.myCar.myDrive_3_instance.StopWatch_instance
+			"StopWatch increments the time counter by one dT."
+			/begin LOC_MEASUREMENT
+				myCar.myCar.myDrive_3_instance.StopWatch_instance.timeCounter
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION myCar.myCar.P
@@ -909,8 +1007,17 @@
 				myCar.SADController.mySAD_instance.myControl_instance.power
 			/end LOC_MEASUREMENT
 		/end FUNCTION
-		/begin FUNCTION coverageLib.CoverageInstrumentation
+		/begin FUNCTION myCar.RTMon
 			""
+			/begin DEF_CHARACTERISTIC
+				myCar.RTMon.expected
+			/end DEF_CHARACTERISTIC
+			/begin LOC_MEASUREMENT
+				myCar.RTMon.emem
+				myCar.RTMon.lastfailtime
+				myCar.RTMon.mydelta
+				myCar.RTMon.time
+			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
@@ -936,9 +1043,18 @@
 			"Provides the delta time variable"
 			ROOT
 		/end GROUP
-		/begin GROUP coverageLib.CoverageInstrumentation
+		/begin GROUP myCar.RTMon
 			""
 			ROOT
+			/begin REF_CHARACTERISTIC
+				myCar.RTMon.expected
+			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				myCar.RTMon.emem
+				myCar.RTMon.lastfailtime
+				myCar.RTMon.mydelta
+				myCar.RTMon.time
+			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP myCar.SADController
 			""
@@ -1012,6 +1128,19 @@
 				myCar.myCar.myDrive_3_instance.s
 				myCar.myCar.myDrive_3_instance.v
 			/end REF_MEASUREMENT
+			/begin SUB_GROUP
+				myCar.myCar.myDrive_3_instance.StopWatch_instance
+				myCar.myCar.myDrive_3_instance.WriteData_instance
+			/end SUB_GROUP
+		/end GROUP
+		/begin GROUP myCar.myCar.myDrive_3_instance.StopWatch_instance
+			"StopWatch increments the time counter by one dT."
+			/begin REF_MEASUREMENT
+				myCar.myCar.myDrive_3_instance.StopWatch_instance.timeCounter
+			/end REF_MEASUREMENT
+		/end GROUP
+		/begin GROUP myCar.myCar.myDrive_3_instance.WriteData_instance
+			""
 		/end GROUP
 		/begin GROUP myCar.myDriver
 			""

@@ -4,7 +4,7 @@ blockdiagramSpecification Main {
 		outPin }
 methodBody move {
 		outPin active {
-			connection_3, connection_8, connection_14, connection_22, connection_36, connection_38, connection_54
+			connection_63, connection_68, connection_3, connection_8, connection_14, connection_22, connection_36, connection_38, connection_54, connection_65
 		}
 	}
 	simpleIdentifier BrakeMomentum at (181, 31) {
@@ -206,7 +206,7 @@ methodBody move {
 		label at (20, -1)
 		inPin connection_39
 		outPin {
-			connection_32
+			connection_60, connection_32
 		}
 		sequenceCall at (-10, -14) {
 			inPin connection_38
@@ -249,7 +249,7 @@ methodBody move {
 	simpleIdentifier s at (471, 325) {
 		label at (20, -1)
 		inPin outPin {
-			connection_45
+			connection_69, connection_45
 		}
 		sequenceCall at (-10, -14) {
 			inPin
@@ -330,6 +330,50 @@ methodBody move {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	complexIdentifier WriteData_instance at (531, 461) size (14, 8) {
+		label at (0, 1)
+		methodCall WriteData.WriteData.writeData {
+			argumentPin x at (left, 0) connection_66 {
+				bendpoints (0, -60)
+			}
+			argumentPin y at (left, 4) connection_60 {
+				bendpoints (0, 120)
+			}
+			sequenceCall at (-70, 16) {
+				inPin connection_65
+			}
+		}
+	}
+	complexIdentifier StopWatch_instance at (191, 511) size (6, 4) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) {
+				connection_67, connection_66
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-70, -30) {
+				inPin connection_63
+			}
+		}
+	}
+	complexIdentifier WriteData_instance at (801, 441) size (14, 8) {
+		label at (0, 1)
+		methodCall WriteData.WriteData.writeData {
+			argumentPin x at (left, 0) connection_67 {
+				bendpoints (210, 0), (210, 40), (520, 40), (520, -80)
+			}
+			argumentPin y at (left, 4) connection_69 {
+				bendpoints (0, 80), (240, 80), (240, 160)
+			}
+			sequenceCall at (-100, 6) {
+				inPin connection_68
+			}
 		}
 	}
 }

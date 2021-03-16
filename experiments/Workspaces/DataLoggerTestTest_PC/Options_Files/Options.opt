@@ -4,7 +4,6 @@
     <PropertySet name="WorkspaceHandling">
       <Property name="OpenMode" type="StringProperty">LastExperiment</Property>
       <Property name="DefaultExperiment" type="StringProperty" />
-      <Property name="LastWorkspaceLocation" type="StringProperty">C:\ETAS\workspace\Git\CCF\experiments\Workspaces\myDbleTest_PC\myDbleTest_PC.eew</Property>
     </PropertySet>
     <PropertySet name="ETargetINTECRIO">
       <PropertySet name="Options">
@@ -21,6 +20,9 @@
         <Property name="SILSimulationTimeUnit" type="StringProperty">seconds</Property>
         <Property name="SILSimulationMode" type="StringProperty">Adaptive</Property>
       </PropertySet>
+    </PropertySet>
+    <PropertySet name="SignalGenerator">
+      <Property name="DefaultStopBehaviour" type="StringProperty">Lastvalue</Property>
     </PropertySet>
   </PropertySet>
 </PropertySets>
