@@ -56,7 +56,7 @@
 		        QP_BLOB 1
 		    /end SOURCE
 		    /begin TP_BLOB
-		         /* programm id */ 3716166358
+		         /* programm id */ 176172945
 		         /* target id   */ 7
 		         /*             */ 0 2 0
 		    /end TP_BLOB
@@ -103,7 +103,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 1
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 1
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -133,7 +133,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 2
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 2
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -155,7 +155,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 0
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 0
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -177,7 +177,7 @@
 				/* upper limit        */ 3.4028234663852886E+38
 			/end AXIS_DESCR
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 3
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -191,7 +191,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 8
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -205,7 +205,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 5
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -219,7 +219,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -233,7 +233,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 9
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -247,7 +247,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 10
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 10
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -261,7 +261,7 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 4
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 4
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -275,11 +275,219 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 11
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 11
 			/end IF_DATA
 		/end MEASUREMENT
 
 		/begin CHARACTERISTIC myCar.myCar.myVehicle.g
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 1 1000 7
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.BrakeMomentum
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ NO_INPUT_QUANTITY
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 1
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.EngineMomentum
+			/* long identifier    */ ""
+			/* type               */ MAP
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_MAP_R32R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ NO_INPUT_QUANTITY
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ myCar.myDrive_3.v
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.momentum
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 9
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.v
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 11
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.AirFriction
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ myCar.myDrive_3.v
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 6
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 0
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.h
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 8
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.dh
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 5
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.Landscape
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ myCar.myDrive_3.s
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 128
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 3
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.s
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 10
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.ds
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 6
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.TrackSize
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 4
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.g
 			/* long identifier    */ ""
 			/* type               */ VALUE
 			/* ecu address        */ 0x0
@@ -770,6 +978,7 @@
 				resources.CarMessages.v
 			/end OUT_MEASUREMENT
 			/begin SUB_FUNCTION
+				myCar.myCar.myDrive_3_instance
 				myCar.myCar.myVehicle
 			/end SUB_FUNCTION
 		/end FUNCTION
@@ -790,6 +999,25 @@
 				myCar.myCar.myVehicle.momentum
 				myCar.myCar.myVehicle.s
 				myCar.myCar.myVehicle.v
+			/end LOC_MEASUREMENT
+		/end FUNCTION
+		/begin FUNCTION myCar.myCar.myDrive_3_instance
+			""
+			/begin DEF_CHARACTERISTIC
+				myCar.myCar.myDrive_3_instance.BrakeMomentum
+				myCar.myCar.myDrive_3_instance.EngineMomentum
+				myCar.myCar.myDrive_3_instance.AirFriction
+				myCar.myCar.myDrive_3_instance.Landscape
+				myCar.myCar.myDrive_3_instance.TrackSize
+				myCar.myCar.myDrive_3_instance.g
+			/end DEF_CHARACTERISTIC
+			/begin LOC_MEASUREMENT
+				myCar.myCar.myDrive_3_instance.dh
+				myCar.myCar.myDrive_3_instance.ds
+				myCar.myCar.myDrive_3_instance.h
+				myCar.myCar.myDrive_3_instance.momentum
+				myCar.myCar.myDrive_3_instance.s
+				myCar.myCar.myDrive_3_instance.v
 			/end LOC_MEASUREMENT
 		/end FUNCTION
 		/begin FUNCTION myCar.myDriver
@@ -871,9 +1099,6 @@
 				myCar.SADController.mySAD_instance.myControl_instance.power
 			/end LOC_MEASUREMENT
 		/end FUNCTION
-		/begin FUNCTION coverageLib.CoverageInstrumentation
-			""
-		/end FUNCTION
 		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
 		/end FUNCTION
@@ -896,10 +1121,6 @@
 
 		/begin GROUP SystemLib.Miscellaneous.DeltaTimeService
 			"Provides the delta time variable"
-			ROOT
-		/end GROUP
-		/begin GROUP coverageLib.CoverageInstrumentation
-			""
 			ROOT
 		/end GROUP
 		/begin GROUP myCar.SADController
@@ -943,8 +1164,28 @@
 			""
 			ROOT
 			/begin SUB_GROUP
+				myCar.myCar.myDrive_3_instance
 				myCar.myCar.myVehicle
 			/end SUB_GROUP
+		/end GROUP
+		/begin GROUP myCar.myCar.myDrive_3_instance
+			""
+			/begin REF_CHARACTERISTIC
+				myCar.myCar.myDrive_3_instance.BrakeMomentum
+				myCar.myCar.myDrive_3_instance.EngineMomentum
+				myCar.myCar.myDrive_3_instance.AirFriction
+				myCar.myCar.myDrive_3_instance.Landscape
+				myCar.myCar.myDrive_3_instance.TrackSize
+				myCar.myCar.myDrive_3_instance.g
+			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				myCar.myCar.myDrive_3_instance.dh
+				myCar.myCar.myDrive_3_instance.ds
+				myCar.myCar.myDrive_3_instance.h
+				myCar.myCar.myDrive_3_instance.momentum
+				myCar.myCar.myDrive_3_instance.s
+				myCar.myCar.myDrive_3_instance.v
+			/end REF_MEASUREMENT
 		/end GROUP
 		/begin GROUP myCar.myCar.myVehicle
 			""

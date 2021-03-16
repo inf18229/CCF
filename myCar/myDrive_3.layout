@@ -1,0 +1,17 @@
+Component       myCar.myDrive_3 size ( 19 , 11 ) {
+	labelPosition ( 0 , 1 )
+	methodLayout move {
+		pin brakeCtrl ( Left , 3 )
+		pin powerCtrl ( Left , 7 )
+		pin dtime ( Left , 0 )
+	}
+	memberLayout momentum {
+		getPinPosition ( Right , 0 )
+	}
+	memberLayout v {
+		getPinPosition ( Right , 3 )
+	}
+	memberLayout s {
+		getPinPosition ( Right , 6 )
+	}
+}

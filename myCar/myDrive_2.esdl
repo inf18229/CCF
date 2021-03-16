@@ -19,7 +19,7 @@ class myDrive_2 {
 	real v = 0.0;
 	characteristic real g = 9.81;
 
-	@generated("blockdiagram", "d1e846e3")
+	@generated("blockdiagram", "883b5977")
 	public real vCar(real in powerCtrl, real in brakeCtrl) {
 		if (s > TrackSize) {
 			s = 0.0; // Main/vCar 1/if-then 1

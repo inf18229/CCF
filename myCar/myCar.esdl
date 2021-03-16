@@ -1,16 +1,19 @@
 package myCar;
 import resources.CarMessages;
+import SystemLib.Miscellaneous.DeltaTimeService;
 
 static class myCar
 reads CarMessages.power, CarMessages.brake 
 writes CarMessages.v {
 
 	myDrive_2 myVehicle;
+	myDrive_3 myDrive_3_instance;
 
 	@thread
-	@generated("blockdiagram", "85c51305")
+	@generated("blockdiagram", "dd3f6339")
 	public void calc() {
-		CarMessages.v = myVehicle.vCar(CarMessages.power, CarMessages.brake); // Main/calc 1
+		CarMessages.v = myDrive_3_instance.v; // Main/calc 1
+		myDrive_3_instance.move(CarMessages.brake, CarMessages.power, DeltaTimeService.deltaT); // Main/calc 2
 	}
 	
 }
