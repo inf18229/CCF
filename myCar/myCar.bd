@@ -3,7 +3,7 @@ blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
 			connection_16
-		, connection_18
+		, connection_27
 		}
 	}
 	
@@ -33,7 +33,28 @@ blockdiagramSpecification Main {
 		connection_16
 		}
 	}
-complexIdentifier myDrive_3_instance at (161, 101) size (19, 11) {
+simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (31, 35) {
+		label at (0, -1)
+		inPin outPin {
+			connection_19
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier Landscape at (481, 211) {
+		label at (0, 1)
+		inPin connection_20 {
+			bendpoints (120, 0)
+		}
+		outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier myDrive_3_instance at (161, 101) size (19, 16) {
 		label at (0, 1)
 		methodCall myCar.myDrive_3.move {
 			argumentPin brakeCtrl at (left, 3) connection_15
@@ -41,8 +62,12 @@ complexIdentifier myDrive_3_instance at (161, 101) size (19, 11) {
 			argumentPin dtime at (left, 0) connection_19 {
 				bendpoints (70, 0)
 			}
+			argumentPin length at (left, 10) connection_28
+			argumentPin height at (left, 12) connection_21 {
+				bendpoints (0, 120), (-440, 120), (-440, 0)
+			}
 			sequenceCall at (-50, -30) {
-				inPin connection_18
+				inPin connection_27
 			}
 		}
 		elementCall (myCar.myDrive_3.momentum) {
@@ -59,15 +84,18 @@ complexIdentifier myDrive_3_instance at (161, 101) size (19, 11) {
 			}
 		}
 		elementCall (myCar.myDrive_3.s) {
-			returnPin at (right, 6) sequenceCall {
+			returnPin at (right, 11) {
+				connection_20
+			}
+			sequenceCall {
 				inPin
 			}
 		}
 	}
-	simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (31, 35) {
+	simpleIdentifier TrackSize at (41, 205) {
 		label at (0, -1)
-		inPin outPin {
-			connection_19
+		outPin {
+			connection_28
 		}
 		sequenceCall {
 			inPin

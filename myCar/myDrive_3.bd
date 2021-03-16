@@ -4,7 +4,7 @@ blockdiagramSpecification Main {
 		outPin }
 methodBody move {
 		outPin active {
-			connection_3, connection_8, connection_14, connection_22, connection_25, connection_36, connection_38
+			connection_3, connection_8, connection_14, connection_22, connection_36, connection_38, connection_54
 		}
 	}
 	simpleIdentifier BrakeMomentum at (181, 31) {
@@ -160,8 +160,8 @@ methodBody move {
 	}
 	subtraction at (201, 246) {
 		inPin connection_20
-		inPin connection_27 {
-			bendpoints (10, 0), (10, -40)
+		inPin connection_56 {
+			bendpoints (100, 0), (100, -40)
 		}
 		outPin {
 			connection_23
@@ -176,32 +176,11 @@ methodBody move {
 			connection_24
 		}
 	}
-	simpleIdentifier Landscape at (111, 291) {
-		label at (0, 1)
-		inPin connection_28 {
-			bendpoints (10, 0)
-		}
-		outPin {
-			connection_27, connection_26
-		}
-		sequenceCall {
-			inPin
-		}
-	}
-	simpleIdentifier s at (31, 305) {
-		label at (20, -1)
-		inPin outPin {
-			connection_28
-		}
-		sequenceCall at (-10, -14) {
-			inPin
-		}
-	}
 	simpleIdentifier h at (231, 305) {
 		label at (20, -1)
-		inPin connection_26
+		inPin connection_55
 		outPin sequenceCall at (0, -14) {
-			inPin connection_25
+			inPin connection_54
 		}
 	}
 	simpleIdentifier v at (31, 355) {
@@ -279,7 +258,7 @@ methodBody move {
 	greater at (601, 326) {
 		inPin connection_45
 		inPin connection_49 {
-			bendpoints (10, 0), (10, -10)
+			bendpoints (40, 0)
 		}
 		outPin {
 			connection_46
@@ -297,15 +276,6 @@ methodBody move {
 	literal Numeric "0.0" at (751, 343) size (49, 0) {
 		outPin {
 			connection_48
-		}
-	}
-	simpleIdentifier TrackSize at (521, 355) {
-		label at (0, -1)
-		outPin {
-			connection_49
-		}
-		sequenceCall at (-10, -14) {
-			inPin
 		}
 	}
 	simpleIdentifier s at (811, 345) {
@@ -339,6 +309,24 @@ methodBody move {
 		label at (0, -1)
 		outPin {
 			connection_52
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier move.length at (521, 355) {
+		label at (0, -1)
+		outPin {
+			connection_49
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier move.height at (31, 305) {
+		label at (0, -1)
+		outPin {
+			connection_56, connection_55
 		}
 		sequenceCall {
 			inPin

@@ -355,7 +355,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 9
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 7
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -369,7 +369,7 @@
 			/* upper limit        */ 200.0
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 11
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 9
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -405,7 +405,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 8
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 6
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -419,31 +419,9 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 5
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 3
 			/end IF_DATA
 		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.Landscape
-			/* long identifier    */ ""
-			/* type               */ CURVE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_CURVE_R32R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin AXIS_DESCR
-				/* axis type          */ STD_AXIS
-				/* input quantity     */ myCar.myDrive_3.s
-				/* conversion         */ esdl_ident
-				/* max axis point     */ 128
-				/* lower limit        */ -3.4028234663852886E+38
-				/* upper limit        */ 3.4028234663852886E+38
-			/end AXIS_DESCR
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 3
-			/end IF_DATA
-		/end CHARACTERISTIC
 
 		/begin MEASUREMENT myCar.myCar.myDrive_3_instance.s
 			/* long identifier    */ ""
@@ -455,7 +433,7 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 10
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 8
 			/end IF_DATA
 		/end MEASUREMENT
 
@@ -469,23 +447,9 @@
 			/* upper limit        */ 3.4028234663852886E+38
 			ECU_ADDRESS 0x0
 			/begin IF_DATA E_TARGET
-			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 6
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 4
 			/end IF_DATA
 		/end MEASUREMENT
-
-		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.TrackSize
-			/* long identifier    */ ""
-			/* type               */ VALUE
-			/* ecu address        */ 0x0
-			/* record layout      */ STANDARD_VALUE_R32
-			/* max diff value     */ 0.0
-			/* conversion         */ esdl_ident
-			/* lower limit        */ -3.4028234663852886E+38
-			/* upper limit        */ 3.4028234663852886E+38
-			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 4
-			/end IF_DATA
-		/end CHARACTERISTIC
 
 		/begin CHARACTERISTIC myCar.myCar.myDrive_3_instance.g
 			/* long identifier    */ ""
@@ -497,7 +461,43 @@
 			/* lower limit        */ -3.4028234663852886E+38
 			/* upper limit        */ 3.4028234663852886E+38
 			/begin IF_DATA E_TARGET
-			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 7
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 5 1001 0 1001 0 1001 3 1000 0 1000 5
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.Landscape
+			/* long identifier    */ ""
+			/* type               */ CURVE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_CURVE_R32R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin AXIS_DESCR
+				/* axis type          */ STD_AXIS
+				/* input quantity     */ NO_INPUT_QUANTITY
+				/* conversion         */ esdl_ident
+				/* max axis point     */ 128
+				/* lower limit        */ -3.4028234663852886E+38
+				/* upper limit        */ 3.4028234663852886E+38
+			/end AXIS_DESCR
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 2
+			/end IF_DATA
+		/end CHARACTERISTIC
+
+		/begin CHARACTERISTIC myCar.myCar.TrackSize
+			/* long identifier    */ ""
+			/* type               */ VALUE
+			/* ecu address        */ 0x0
+			/* record layout      */ STANDARD_VALUE_R32
+			/* max diff value     */ 0.0
+			/* conversion         */ esdl_ident
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			/begin IF_DATA E_TARGET
+			    DP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
 			/end IF_DATA
 		/end CHARACTERISTIC
 
@@ -970,6 +970,10 @@
 
 		/begin FUNCTION myCar.myCar
 			""
+			/begin DEF_CHARACTERISTIC
+				myCar.myCar.Landscape
+				myCar.myCar.TrackSize
+			/end DEF_CHARACTERISTIC
 			/begin IN_MEASUREMENT
 				resources.CarMessages.brake
 				resources.CarMessages.power
@@ -1007,8 +1011,6 @@
 				myCar.myCar.myDrive_3_instance.BrakeMomentum
 				myCar.myCar.myDrive_3_instance.EngineMomentum
 				myCar.myCar.myDrive_3_instance.AirFriction
-				myCar.myCar.myDrive_3_instance.Landscape
-				myCar.myCar.myDrive_3_instance.TrackSize
 				myCar.myCar.myDrive_3_instance.g
 			/end DEF_CHARACTERISTIC
 			/begin LOC_MEASUREMENT
@@ -1163,6 +1165,10 @@
 		/begin GROUP myCar.myCar
 			""
 			ROOT
+			/begin REF_CHARACTERISTIC
+				myCar.myCar.Landscape
+				myCar.myCar.TrackSize
+			/end REF_CHARACTERISTIC
 			/begin SUB_GROUP
 				myCar.myCar.myDrive_3_instance
 				myCar.myCar.myVehicle
@@ -1174,8 +1180,6 @@
 				myCar.myCar.myDrive_3_instance.BrakeMomentum
 				myCar.myCar.myDrive_3_instance.EngineMomentum
 				myCar.myCar.myDrive_3_instance.AirFriction
-				myCar.myCar.myDrive_3_instance.Landscape
-				myCar.myCar.myDrive_3_instance.TrackSize
 				myCar.myCar.myDrive_3_instance.g
 			/end REF_CHARACTERISTIC
 			/begin REF_MEASUREMENT
