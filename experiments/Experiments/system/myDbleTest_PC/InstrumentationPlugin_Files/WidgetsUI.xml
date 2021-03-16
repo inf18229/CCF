@@ -1,0 +1,25 @@
+<?SCHEMA schemaVersion="1.0"?>
+<WidgetsUIConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.WidgetsUI.xsd" xsi:type="ETAS.EE.Data.Instrumentation.WidgetsUIConfigurationType" IsPresentationMode="false">
+  <signals xsi:type="ETAS.EE.Data.Instrumentation.SignalListType" />
+  <containers xsi:type="ETAS.EE.Data.Instrumentation.LayerContainerListType">
+    <item xsi:type="ETAS.EE.Data.Instrumentation.LayerContainerType" id="ID4f47db20-03b9-4851-a50c-5b360cc16400">
+      <properties xsi:type="ETAS.EE.Data.Instrumentation.LayerContainerPropertiesType" name="Main Window" windowPosition="2147483647, 2147483647" size="800,600" isMinimized="false" isMaximized="false" isMainWindow="true" />
+      <layerReferences xsi:type="ETAS.EE.Data.Instrumentation.LayerRefListType">
+        <Item xsi:type="ETAS.EE.Data.Instrumentation.LayerRefType" idRef="ID716058d1-1165-4e86-b021-bde4fd943151" />
+      </layerReferences>
+    </item>
+  </containers>
+  <layers xsi:type="ETAS.EE.Data.Instrumentation.LayerListType">
+    <item xsi:type="ETAS.EE.Data.Instrumentation.LayerType" id="ID716058d1-1165-4e86-b021-bde4fd943151">
+      <properties xsi:type="ETAS.EE.Data.Instrumentation.LayerPropertiesType" name="Layer" showGrid="true" size="3200, 2400" locked="false">
+        <backGround xsi:type="ETAS.EE.Data.Instrumentation.BackGroundPropertiesType" color="AliceBlue" type="Color">
+          <Image xsi:type="ETAS.EE.Data.Instrumentation.BackGroundImageType" fileLocation="" layout="None" offset="0, 0" zoom="100" />
+        </backGround>
+      </properties>
+      <widgetGroups xsi:type="ETAS.EE.Data.Instrumentation.WidgetGroupRefListType" />
+    </item>
+  </layers>
+  <widgetGroups xsi:type="ETAS.EE.Data.Instrumentation.WidgetGroupListType" />
+  <widgets xsi:type="ETAS.EE.Data.Instrumentation.WidgetListType" />
+  <widgetTypes xsi:type="ETAS.EE.Data.Instrumentation.WidgetTypeInfoListType" />
+</WidgetsUIConfiguration>

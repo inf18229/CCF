@@ -2,8 +2,8 @@ classType myCar.myCar
 blockdiagramSpecification Main {
 	methodBody calc {
 		outPin active {
-			connection_16
-		, connection_27
+			connection_29
+		, connection_16, connection_27, connection_34
 		}
 	}
 	
@@ -99,6 +99,47 @@ simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (31, 35) {
 		}
 		sequenceCall {
 			inPin
+		}
+	}
+	complexIdentifier P at (321, 421) size (7, 4) {
+		label at (0, 1)
+		methodCall Performance.Performance.millis {
+			returnPin at (right, 0) {
+				connection_39, connection_30
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier myTime at (491, 425) {
+		label at (0, -1)
+		inPin connection_30
+		outPin {
+			connection_38
+		}
+		sequenceCall {
+			inPin connection_29
+		}
+	}
+	simpleIdentifier dTime at (621, 505) {
+		label at (0, -1)
+		inPin connection_35 {
+			bendpoints (10, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_34
+		}
+	}
+	subtraction at (571, 476) {
+		inPin connection_38 {
+			bendpoints (0, 50)
+		}
+		inPin connection_39 {
+			bendpoints (40, 0), (40, 70)
+		}
+		outPin {
+			connection_35
 		}
 	}
 }

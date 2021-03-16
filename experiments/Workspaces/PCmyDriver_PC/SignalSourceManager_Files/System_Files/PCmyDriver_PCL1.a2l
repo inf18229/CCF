@@ -293,6 +293,34 @@
 			/end IF_DATA
 		/end CHARACTERISTIC
 
+		/begin MEASUREMENT myCar.myCar.myTime
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 4
+			/end IF_DATA
+		/end MEASUREMENT
+
+		/begin MEASUREMENT myCar.myCar.dTime
+			/* long identifier    */ ""
+			/* datatype           */ FLOAT32_IEEE
+			/* conversion         */ esdl_ident
+			/* resolution         */ 1
+			/* accuracy           */ 100.0
+			/* lower limit        */ -3.4028234663852886E+38
+			/* upper limit        */ 3.4028234663852886E+38
+			ECU_ADDRESS 0x0
+			/begin IF_DATA E_TARGET
+			    KP_BLOB 0xFFFFFFFF 0xFFFFFFFF 4 1001 0 1001 0 1001 3 1000 3
+			/end IF_DATA
+		/end MEASUREMENT
+
 		/begin MEASUREMENT resources.CarMessages.v
 			/* long identifier    */ ""
 			/* datatype           */ FLOAT32_IEEE
@@ -773,7 +801,12 @@
 			/begin OUT_MEASUREMENT
 				resources.CarMessages.v
 			/end OUT_MEASUREMENT
+			/begin LOC_MEASUREMENT
+				myCar.myCar.dTime
+				myCar.myCar.myTime
+			/end LOC_MEASUREMENT
 			/begin SUB_FUNCTION
+				myCar.myCar.P
 				myCar.myCar.myDrive_3_instance
 			/end SUB_FUNCTION
 		/end FUNCTION
@@ -793,6 +826,9 @@
 				myCar.myCar.myDrive_3_instance.s
 				myCar.myCar.myDrive_3_instance.v
 			/end LOC_MEASUREMENT
+		/end FUNCTION
+		/begin FUNCTION myCar.myCar.P
+			""
 		/end FUNCTION
 		/begin FUNCTION myCar.myDriver
 			""
@@ -873,11 +909,11 @@
 				myCar.SADController.mySAD_instance.myControl_instance.power
 			/end LOC_MEASUREMENT
 		/end FUNCTION
-		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
-			"Provides the delta time variable"
-		/end FUNCTION
 		/begin FUNCTION coverageLib.CoverageInstrumentation
 			""
+		/end FUNCTION
+		/begin FUNCTION SystemLib.Miscellaneous.DeltaTimeService
+			"Provides the delta time variable"
 		/end FUNCTION
 
 		/begin RECORD_LAYOUT STANDARD_CURVE_R32R32
@@ -948,9 +984,17 @@
 				myCar.myCar.Landscape
 				myCar.myCar.TrackSize
 			/end REF_CHARACTERISTIC
+			/begin REF_MEASUREMENT
+				myCar.myCar.dTime
+				myCar.myCar.myTime
+			/end REF_MEASUREMENT
 			/begin SUB_GROUP
+				myCar.myCar.P
 				myCar.myCar.myDrive_3_instance
 			/end SUB_GROUP
+		/end GROUP
+		/begin GROUP myCar.myCar.P
+			""
 		/end GROUP
 		/begin GROUP myCar.myCar.myDrive_3_instance
 			""

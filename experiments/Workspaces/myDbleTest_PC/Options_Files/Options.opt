@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PropertySets>
+  <PropertySet name="Options">
+    <PropertySet name="WorkspaceHandling">
+      <Property name="OpenMode" type="StringProperty">LastExperiment</Property>
+      <Property name="DefaultExperiment" type="StringProperty" />
+    </PropertySet>
+    <PropertySet name="ETargetINTECRIO">
+      <PropertySet name="Options">
+        <Property name="DEFAULT_ACQUISITION_TASK" type="StringProperty">Task0</Property>
+      </PropertySet>
+    </PropertySet>
+  </PropertySet>
+</PropertySets>
